@@ -1,2 +1,44 @@
-<p>mail-list works!</p>
-<app-nav-actions></app-nav-actions>
+<div class="nav-actions d-flex align-items-center mb-2">
+	<app-nav-actions></app-nav-actions>
+</div>
+
+<div class="elements-list container-fluid">
+	<div class="row fw-bold border-bottom py-2">
+		<div class="col-auto">✔</div>
+		<div class="col-1">Date</div>
+		<div class="col-2">From</div>
+		<div class="col-3">Subject</div>
+		<div class="col">Preview</div>
+		<div class="col-auto">Delete</div>
+	</div>
+
+	<div class="row align-items-center border-bottom py-2">
+		<div class="col-auto">
+			<input class="form-check-input" type="checkbox">
+		</div>
+		<div class="col-1">08/09</div>
+		<div class="col-2">Mario Rossi</div>
+		<div class="col-3 text-truncate">Meeting</div>
+		<div class="col text-truncate">Ciao, ti ricordo che domani abbiamo la riunione...</div>
+		<div class="col-auto">
+			<button class="btn btn-sm btn-link p-0">
+				<img src="assets/bin.svg" alt="delete" width="20">
+			</button>
+		</div>
+	</div>
+
+	<div class="row align-items-center border-bottom py-2">
+		<div class="col-auto">
+			<input class="form-check-input" type="checkbox">
+		</div>
+		<div class="col-1">07/09</div>
+		<div class="col-2">Support</div>
+		<div class="col-3 text-truncate">Benvenuto</div>
+		<div class="col text-truncate">Grazie per esserti registrato al nostro servizio...</div>
+		<div class="col-auto">
+			<button class="btn btn-sm btn-link p-0">
+				<img src="assets/bin.svg" alt="delete" width="20">
+			</button>
+		</div>
+	</div>
+</div>

@@ -1,8 +1,21 @@
 <app-header-panel></app-header-panel>
-<div class="sidebar-folder">
-	<app-folder-list></app-folder-list>
-</div>
-<div class="mail-container">
-	<app-mail-list></app-mail-list>
-	<app-mail-viewer></app-mail-viewer>
+
+<div class="container-fluid">
+	<div class="row">
+		<nav class="col-1 d-flex flex-column p-3 border-end min-vh-100 d-none d-md-block">
+			<app-folder-list></app-folder-list>
+		</nav>
+
+		<div class="col-11 d-flex flex-column p-3">
+			<div class="mail-list flex-grow-1">
+				<app-mail-list></app-mail-list>
+			</div>
+
+			<hr class="divider">
+
+			<div class="mail-viewer flex-grow-1">
+				<app-mail-viewer></app-mail-viewer>
+			</div>
+		</div>
+	</div>
 </div>

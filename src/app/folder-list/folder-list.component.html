@@ -1,1 +1,31 @@
-<p>folder-list works!</p>
+<button class="btn btn-primary w-100 mb-3 button-compose" type="button"
+	onclick="window.open('compose.html','targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=500')">
+	COMPOSE
+</button>
+
+<ul class="nav flex-column w-100">
+	<li class="nav-item">
+		<button class="btn btn-light w-100 text-start mb-1 mailbox-nav">
+			<img class="icon me-2" src="assets/inbox.svg" alt="inbox"> Inbox
+		</button>
+	</li>
+	<li class="nav-item">
+		<button class="btn btn-light w-100 text-start mb-1 mailbox-nav">
+			<img class="icon me-2" src="assets/drafts.svg" alt="drafts"> Drafts
+		</button>
+	</li>
+	<li class="nav-item">
+		<button class="btn btn-light w-100 text-start mb-1 mailbox-nav">
+			<img class="icon me-2" src="assets/sent.svg" alt="sent"> Sent
+		</button>
+	</li>
+	<li class="nav-item">
+		<button class="btn btn-light w-100 text-start mb-1 mailbox-nav">
+			<img class="icon me-2" src="assets/bin.svg" alt="bin"> Trash
+		</button>
+	</li>
+</ul>
+
+<button class="btn btn-outline-secondary w-100 mt-3 add-folder">
+	+ Add custom folder
+</button>
