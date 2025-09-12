@@ -1,0 +1,13 @@
+<!-- lista mail test -->
+<div class="mail-row row align-items-center border-bottom py-2">
+	<div class="col-auto checkbox"><input class="form-check-input" type="checkbox"></div>
+	<div class="col-auto col-md-1 date">{{ message?.date }}</div>
+	<div class="col-auto col-md-2 from">{{ message?.from}}</div>
+	<div class="col-auto col-md-3 subject text-truncate">{{ message?.from}}</div>
+	<div class="col preview text-truncate d-none d-md-block">{{ message?.body }}</div>
+	<div class="col-auto">
+		<button class="btn btn-sm btn-link p-0">
+			<img class="delete" src="assets/bin.svg" alt="delete">
+		</button>
+	</div>
+</div>
