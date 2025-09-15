@@ -26,6 +26,7 @@
 @media (max-width: 768px) {
 
 	.mail-row {
+		font-size: smaller;
 		display: grid;
 		grid-template-columns: 1fr 3fr 1fr;
 		grid-template-rows: auto;
@@ -35,6 +36,7 @@
 	}
 
 	.checkbox {
+		font-size: medium;
 		grid-area: checkbox;
 	}
 
@@ -44,13 +46,19 @@
 
 	.from {
 		grid-area: from;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 100px;
+		min-width: 160px;
 	}
 
 	.subject {
-		max-width: 150px;
+		min-width: 170px;
 		grid-area: subject;
 		white-space: nowrap;
 		font-weight: bold;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.delete-container {

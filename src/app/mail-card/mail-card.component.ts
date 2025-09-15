@@ -10,10 +10,13 @@ import { DatePipe } from '@angular/common';
 })
 export class MailCardComponent {
 
-	@Input() message?: MessageDetail;
-	@Output() onMessageSelected = new EventEmitter<{ message: MessageDetail, selected: boolean }>();
+	@Input() message!: MessageDetail;
+	@Input() selected = false;
 
-	selectMessage(message: MessageDetail, selected: boolean) {
-		this.onMessageSelected.emit()
+	@Output() active = new EventEmitter<{ message: MessageDetail, selected: boolean }>();
+
+	onCheckboxChange(e: Event) {
+		const checked = (e.target as HTMLInputElement).checked;
+		this.active.emit({ message: this.message, selected: checked })
 	}
 }

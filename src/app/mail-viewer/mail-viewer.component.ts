@@ -17,7 +17,7 @@ export class MailViewerComponent {
 			date: new Date("2025-09-11"),
 			from: "alice@example.com",
 			subject: "Caffè?",
-			body: "Ehi Bob, ci prendiamo un caffè più tardi?"
+			body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptatum placeat unde quis, pariatur temporibus laudantium beatae eaque voluptas, commodi iste, exercitationem esse dolor aut? Harum vel a repellendus soluta est hic, ut cumque perspiciatis molestias. Dicta enim mollitia ea praesentium deserunt laborum ratione, alias dolore, autem vel nulla quibusdam obcaecati et numquam eligendi? In quia atque quibusdam delectus voluptas eos, facilis similique porro illo quo iusto praesentium quaerat distinctio! Obcaecati distinctio similique quam vel doloribus at reiciendis, hic fuga consequuntur? Quaerat unde fugiat minus pariatur rem sequi quod itaque doloremque numquam, dicta modi eos at porro minima sunt provident?"
 		},
 		{
 			date: new Date("2025-09-13"),
@@ -27,9 +27,33 @@ export class MailViewerComponent {
 		},
 		{
 			date: new Date("2025-09-12"),
-			from: "dave@example.com",
+			from: "zimzimzamzum@example.com",
+			subject: "Il titolo pià lungo della storia",
+			body: "Zim zam me ne sono accorta oraaaaaaaaaaaaa, sistemare di nuovo mobile ingrombro di tutte le proprietà mail (from, subject, preview...)"
+		},
+		{
+			date: new Date("2025-09-13"),
+			from: "muffin@example.com",
 			subject: "Pranzo veloce",
 			body: "Ti va un panino veloce al bar sotto?"
+		},
+		{
+			date: new Date("2025-09-15"),
+			from: "pancake@example.com",
+			subject: "Li mangio tutti",
+			body: "Con burro di arachidi e marmellata, parimpampum"
 		}
 	];
+
+	selected: MessageDetail[] = [];
+
+	onSelectionchanged(sel: MessageDetail[]) {
+		this.selected = sel;
+		console.log(this.selected);
+	}
+
+	deleteSelected() {
+		this.messages = this.messages.filter(m => !this.selected.includes(m));
+		this.selected = [];
+	}
 }

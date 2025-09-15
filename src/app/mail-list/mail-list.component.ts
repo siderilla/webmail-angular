@@ -1,8 +1,9 @@
-import { Component, NgModule, Input } from '@angular/core';
+import { Component, NgModule, Input, EventEmitter, Output } from '@angular/core';
 import { NavActionsComponent } from '../nav-actions/nav-actions.component';
 import { MailCardComponent } from '../mail-card/mail-card.component';
 import { type MessageDetail } from '../model/message-detail';
 import { CommonModule } from '@angular/common';
+import { OutletContext } from '@angular/router';
 
 @Component({
 	selector: 'app-mail-list',
@@ -13,5 +14,20 @@ import { CommonModule } from '@angular/common';
 export class MailListComponent {
 
 	@Input() messages: MessageDetail[] = [];
+	@Output() selectionChanged = new EventEmitter<MessageDetail[]>();
 
+	private selectedMessages: MessageDetail[] = [];
+
+	isSelected(m: MessageDetail): boolean {
+		return this.selectedMessages.includes(m);
+	}
+
+	onSelected(event: { message: MessageDetail; selected: boolean }) {
+		if (event.selected) {
+			this.selectedMessages.push(event.message);
+		} else {
+			this.selectedMessages = this.selectedMessages.filter(m => m !== event.message);
+		}
+		this.selectionChanged.emit(this.selectedMessages);
+	}
 }
