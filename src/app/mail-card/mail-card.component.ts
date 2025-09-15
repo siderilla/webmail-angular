@@ -13,4 +13,7 @@ export class MailCardComponent {
 	@Input() message?: MessageDetail;
 	@Output() onMessageSelected = new EventEmitter<{ message: MessageDetail, selected: boolean }>();
 
+	selectMessage(message: MessageDetail, selected: boolean) {
+		this.onMessageSelected.emit()
+	}
 }
