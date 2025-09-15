@@ -4,9 +4,16 @@
 
 @media (min-width: 769px) {
 
+	.date {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		min-width: 80px;
+	}
+
 	.from {
 		overflow: hidden;
 		text-overflow: ellipsis;
+		min-width: 100px;
 	}
 
 	.subject {

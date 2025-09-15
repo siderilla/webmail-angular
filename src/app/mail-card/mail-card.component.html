@@ -20,10 +20,10 @@
 		[checked]="selected"
 		(change)="onCheckboxChange($event)">
   </div>
-  <div class="col-1 date">{{ message!.date | date:'dd/MM/yyyy' }}</div>
+  <div class="col-2 date">{{ message!.date | date:'dd/MM/yyyy' }}</div>
   <div class="col-2 from">{{ message!.from }}</div>
   <div class="col-2 subject">{{ message!.subject }}</div>
-  <div class="col-4 preview d-none d-md-block">{{ message!.body }}</div>
+  <div class="col-3 preview d-none d-md-block">{{ message!.body }}</div>
   <div class="col-2 delete-container text-end">
     <button class="btn btn-sm btn-link p-0">
       <img class="delete" src="assets/bin.svg" alt="delete">
