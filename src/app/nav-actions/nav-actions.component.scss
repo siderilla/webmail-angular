@@ -1,3 +1,16 @@
+.toolbar {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"write . num-container";
+	align-items: center;
+}
+
+.num-container {
+	grid-area: num-container
+}
+
 .button {
 	background-color: transparent;
 	border: none;
@@ -5,4 +18,27 @@
 
 .icon {
 	width: 20px;
+}
+
+@media (min-width: 769px) {
+
+	.write-button {
+		display: none;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.write-button {
+		background-color: #2ca9bc;
+		border: none;
+		grid-area: write;
+	}
+
+	.write-button:hover {
+		background-color: #2896a7;
+
+	}
+
 }

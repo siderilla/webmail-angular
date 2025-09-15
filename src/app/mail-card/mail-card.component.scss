@@ -1,3 +1,61 @@
 .delete {
 	width: 20px;
 }
+
+@media (min-width: 769px) {
+
+	.from {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.subject {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.preview {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.mail-row {
+		display: grid;
+		grid-template-columns: 1fr 3fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"checkbox from date"
+			". subject delete";
+	}
+
+	.checkbox {
+		grid-area: checkbox;
+	}
+
+	.date {
+		grid-area: date;
+	}
+
+	.from {
+		grid-area: from;
+	}
+
+	.subject {
+		max-width: 150px;
+		grid-area: subject;
+		white-space: nowrap;
+		font-weight: bold;
+	}
+
+	.delete-container {
+		grid-area: delete;
+		justify-self: end;
+		margin-right: 20px;
+	}
+}
