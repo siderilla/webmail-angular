@@ -13,5 +13,5 @@ export class MailTextComponent {
 
 	@Input() selected!: MessageDetail;
 
-	@Input() notSelected: MessageDetail;
+	// @Input() notSelected: MessageDetail;
 }
