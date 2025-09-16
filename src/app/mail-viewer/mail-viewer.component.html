@@ -8,5 +8,7 @@
 <hr class="divider">
 
 <div class="mail-viewer flex-grow-1">
-	<app-mail-text></app-mail-text>
+	<app-mail-text
+		*ngIf="selected"
+		[selected]="selected"></app-mail-text>
 </div>

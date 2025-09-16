@@ -40,20 +40,24 @@ export class MailViewerComponent {
 		{
 			date: new Date("2025-09-15"),
 			from: "pancake@example.com",
+			to: "waffle@machine.com",
 			subject: "Li mangio tutti",
 			body: "Con burro di arachidi e marmellata, parimpampum"
 		}
 	];
 
-	selected: MessageDetail[] = [];
+	selectedMessages: MessageDetail[] = [];
+	selected?: MessageDetail;
 
 	onSelectionchanged(sel: MessageDetail[]) {
-		this.selected = sel;
-		console.log(this.selected);
+		this.selectedMessages = sel;
+		this.selected = sel[sel-length - 1]
+		console.log("last selected", this.selected);
+		console.log("array selected", this.selectedMessages);
 	}
 
 	deleteSelected() {
-		this.messages = this.messages.filter(m => !this.selected.includes(m));
-		this.selected = [];
+		this.messages = this.messages.filter(m => !this.selectedMessages.includes(m));
+		this.selectedMessages = [];
 	}
 }
