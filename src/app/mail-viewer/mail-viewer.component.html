@@ -9,6 +9,6 @@
 
 <div class="mail-viewer flex-grow-1">
 	<app-mail-text
-		*ngIf="selected"
-		[selected]="selected"></app-mail-text>
+		*ngIf="selected" ?	[selected]="selected" : [notSelected]="first"></app-mail-text>
+		<!-- meh -->
 </div>

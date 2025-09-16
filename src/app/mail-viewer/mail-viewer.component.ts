@@ -48,10 +48,13 @@ export class MailViewerComponent {
 
 	selectedMessages: MessageDetail[] = [];
 	selected?: MessageDetail;
+	// const first: MessageDetail = this.messages.find();
+	//da sistemare per visualizare il primo oggetto nella lista messages 
+	//(che dovrebbero essere ordinati per data) se non ne è stato selezionato manco uno
 
 	onSelectionchanged(sel: MessageDetail[]) {
 		this.selectedMessages = sel;
-		this.selected = sel[sel-length - 1]
+		this.selected = sel[sel.length - 1]
 		console.log("last selected", this.selected);
 		console.log("array selected", this.selectedMessages);
 	}

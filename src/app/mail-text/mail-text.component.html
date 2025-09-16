@@ -1,8 +1,8 @@
 <div class="container-fluid my-3 overflow-hidden mail-container">
-	<p class="mb-1"><strong>From:</strong>{{ selected.from }}</p>
-	<p class="mb-1"><strong>To:</strong>{{ selected.to }}</p>
-	<p class="mb-1"><strong>Date:</strong>{{ selected.date }}</p>
-	<p class="mb-3"><strong>Subject:</strong>{{ selected.subject }}</p>
+	<p class="mb-1"><strong>From: </strong>{{ selected.from }}</p>
+	<p class="mb-1"><strong>To: </strong>{{ selected.to }}</p>
+	<p class="mb-1"><strong>Date: </strong>{{ selected.date | date:'MMMM d, y, h:mm a' }}</p>
+	<p class="mb-3"><strong>Subject: </strong>{{ selected.subject }}</p>
 
 	<div class="border rounded p-3 bg-light overflow-y-scroll textbox" style="max-height: 200px;">
 		{{ selected.body }}
