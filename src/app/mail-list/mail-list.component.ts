@@ -13,10 +13,20 @@ import { OutletContext } from '@angular/router';
 })
 export class MailListComponent {
 
+	private selectedMessages: MessageDetail[] = [];
+	selected?: MessageDetail;
+
+
 	@Input() messages: MessageDetail[] = [];
+
 	@Output() selectionChanged = new EventEmitter<MessageDetail[]>();
 
-	private selectedMessages: MessageDetail[] = [];
+	@Output() view = new EventEmitter<MessageDetail>();
+
+	onView(message: MessageDetail) {
+		this.selected = message;
+		this.view.emit(message); // rilancia l'evento al parent (MailViewer)
+	}
 
 	isSelected(m: MessageDetail): boolean {
 		return this.selectedMessages.includes(m);

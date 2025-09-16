@@ -14,6 +14,20 @@ export class MailViewerComponent {
 
 	messages: MessageDetail[] = [
 		{
+			date: new Date("2025-09-17"),
+			from: "mizora@avernus.com",
+			to: "myself@selfmy.com",
+			subject: "Maledizioni infernali",
+			body: "Ah, mortale. Vedo che hai osato aprire questa missiva. Una scelta... coraggiosa, anche se alquanto avventata. Le maledizioni infernali non sono semplici superstizioni da taverna, ma catene scolpite nel sangue e nel fuoco dei Nove Inferi."
+		},
+		{
+			date: new Date("2025-09-15"),
+			from: "shepard@example.com",
+			to: "waffle@machine.com",
+			subject: "Debriefing",
+			body: "Missione terminata. Abbiamo avuto perdite minime, ma la prossima volta servirà più coordinazione. Non possiamo permetterci errori quando la posta in gioco è l'intera galassia."
+		},
+		{
 			date: new Date("2025-09-11"),
 			from: "alice@example.com",
 			subject: "Caffè?",
@@ -48,19 +62,30 @@ export class MailViewerComponent {
 
 	selectedMessages: MessageDetail[] = [];
 	selected?: MessageDetail;
-	// const first: MessageDetail = this.messages.find();
-	//da sistemare per visualizare il primo oggetto nella lista messages 
-	//(che dovrebbero essere ordinati per data) se non ne è stato selezionato manco uno
+
+	// inizializzo con una mail di partenza, per il momento è la prima nell'array
+	// ma dovrebbe essere l'ultima per data d'arrivo
+	ngOnInit() {
+		if (this.messages.length > 0) {
+			this.selected = this.messages[0]; // il primo messaggio in lista
+		}
+	}
 
 	onSelectionchanged(sel: MessageDetail[]) {
 		this.selectedMessages = sel;
-		this.selected = sel[sel.length - 1]
-		console.log("last selected", this.selected);
-		console.log("array selected", this.selectedMessages);
+		this.selected = sel[sel.length - 1]; // ultima selezionata
+		console.log("array di selezionati", this.selectedMessages);
+		console.log("ultimo selezionato", this.selected);
+
 	}
 
-	deleteSelected() {
-		this.messages = this.messages.filter(m => !this.selectedMessages.includes(m));
-		this.selectedMessages = [];
+	onViewMessage(message: MessageDetail) {
+		this.selected = message; // aggiorna subito la mail in visualizzazione
 	}
+
+
+	// deleteSelected() {
+	// 	this.messages = this.messages.filter(m => !this.selectedMessages.includes(m));
+	// 	this.selectedMessages = [];
+	// }
 }

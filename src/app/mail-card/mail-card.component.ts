@@ -17,16 +17,19 @@ export class MailCardComponent {
 	// ricevo dal parent il valore di selected, se non mi passa nulla resta false
 	@Input() selected = false;
 
+	// output per la spunta alla checkbox
 	@Output() active = new EventEmitter<{ message: MessageDetail, selected: boolean }>();
 
+	// output solo per la visualizzazione
+	@Output() view = new EventEmitter<MessageDetail>(); 
+
 	onCheckboxChange(e: Event) {
-		
 		const checked = (e.target as HTMLInputElement).checked;
-		this.active.emit({ message: this.message, selected: checked })
+		this.active.emit({ message: this.message, selected: checked });
 	}
 
-		toggleSelection() {
-		const newState = !this.selected;
-		this.active.emit({ message: this.message, selected: newState });
+	toggleView() {
+		this.view.emit(this.message);
 	}
+
 }

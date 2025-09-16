@@ -15,7 +15,8 @@
 			*ngFor="let message of messages" 
 			[message]="message"
 			[selected]="isSelected(message)"
-			(active)="onSelected($event)">
+			(active)="onSelected($event)"
+			(view)="onView($event)">
 		</app-mail-card>
 	</div>
 </div>
