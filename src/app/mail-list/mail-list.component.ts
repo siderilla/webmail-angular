@@ -25,7 +25,7 @@ export class MailListComponent {
 
 	onView(message: MessageDetail) {
 		this.selected = message;
-		this.view.emit(message); // rilancia l'evento al parent (MailViewer)
+		this.view.emit(message); // rimbalza l'evento a mail-viewer (parent)
 	}
 
 	isSelected(m: MessageDetail): boolean {
