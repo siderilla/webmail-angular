@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class MailViewerComponent {
 
-	// array di messaggi:
+	// array di messaggi (presto spostare in localStorage):
 	messages: MessageDetail[] = [
 		{
 			date: new Date("2025-09-17"),
@@ -67,11 +67,20 @@ export class MailViewerComponent {
 	// inizializzo la variabile di UN messaggio selezionato
 	selected?: MessageDetail;
 
-	// inizializzo con un messaggio di partenza, per il momento è il primo nell'array
-	// ma dovrebbe essere l'ultimo per data d'arrivo
+	// sorting dei messaggi per data (dal più recente al più vecchio)
+	sortingMessages(messages: MessageDetail[]) {
+		const ordered = messages.sort((a: MessageDetail, b: MessageDetail) => b.date.getTime() - a.date.getTime());
+		console.log("ordinato per data: ", ordered);
+		return ordered;
+	}
+
+	// inizializzo con un messaggio di partenza, l'ultimo arrivato per data e quindi il primo visualizzato nella lista
 	ngOnInit() {
 		if (this.messages.length > 0) {
-			this.selected = this.messages[0]; // il primo messaggio in lista
+			const ordered = this.sortingMessages(this.messages);
+			this.selected = ordered[0];
+			this.selectedMessages.push(this.selected);
+			console.log("messaggio visualizzato di default già presente nell'array in partenza ", this.selectedMessages);
 		}
 	}
 

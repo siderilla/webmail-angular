@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageDetail } from '../model/message-detail';
 
 @Component({
   selector: 'app-nav-actions',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './nav-actions.component.scss'
 })
 export class NavActionsComponent {
+
+	// @Input() messageToDelete: MessageDetail;
 
 }
