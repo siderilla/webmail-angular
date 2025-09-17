@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class MailViewerComponent {
 
-	// array di messaggi (presto spostare in localStorage):
+	// array di messaggi (spostare in json locale):
 	messages: MessageDetail[] = [
 		{
 			date: new Date("2025-09-17"),
