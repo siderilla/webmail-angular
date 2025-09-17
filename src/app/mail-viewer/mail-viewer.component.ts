@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class MailViewerComponent {
 
+	// array di messaggi:
 	messages: MessageDetail[] = [
 		{
 			date: new Date("2025-09-17"),
@@ -60,27 +61,32 @@ export class MailViewerComponent {
 		}
 	];
 
+	// inizializzo l'array che si popola di messaggi selezionati:
 	selectedMessages: MessageDetail[] = [];
+
+	// inizializzo la variabile di UN messaggio selezionato
 	selected?: MessageDetail;
 
-	// inizializzo con una mail di partenza, per il momento è la prima nell'array
-	// ma dovrebbe essere l'ultima per data d'arrivo
+	// inizializzo con un messaggio di partenza, per il momento è il primo nell'array
+	// ma dovrebbe essere l'ultimo per data d'arrivo
 	ngOnInit() {
 		if (this.messages.length > 0) {
 			this.selected = this.messages[0]; // il primo messaggio in lista
 		}
 	}
 
+	// quando cambia la selezione prendo dall'array di selezionati l'ultimo messaggio selezionato e lo aggiorno in selected
 	onSelectionchanged(sel: MessageDetail[]) {
 		this.selectedMessages = sel;
 		this.selected = sel[sel.length - 1]; // ultima selezionata
-		console.log("array di selezionati", this.selectedMessages);
-		console.log("ultimo selezionato", this.selected);
-
+		console.log("array di messaggi selezionati: ", this.selectedMessages);
+		console.log("ultimo selezionato: ", this.selected);
 	}
 
+	// quando arriva la richiesta di visualizzazione del messaggio, gli passo il messaggio selezionato
 	onViewMessage(message: MessageDetail) {
 		this.selected = message; // aggiorna subito la mail in visualizzazione
+		console.log("messsaggio visualizzato in mail-text: ", message)
 	}
 
 

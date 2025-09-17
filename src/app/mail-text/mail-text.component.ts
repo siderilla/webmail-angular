@@ -11,7 +11,7 @@ import { DatePipe } from '@angular/common';
 })
 export class MailTextComponent {
 
+	// voglio ricevere il messaggio selezionato per visualizzarlo!
 	@Input() selected!: MessageDetail;
 
-	// @Input() notSelected: MessageDetail;
 }

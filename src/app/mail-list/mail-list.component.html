@@ -14,9 +14,9 @@
 		<app-mail-card 
 			*ngFor="let message of messages" 
 			[message]="message"
-			[selected]="isSelected(message)"
-			(active)="onSelected($event)"
-			(view)="onView($event)">
+			[isSelected]="isSelected(message)"
+			(selectionChanged)="onSelected($event)"
+			(viewMessage)="onView($event)">
 		</app-mail-card>
 	</div>
 </div>
