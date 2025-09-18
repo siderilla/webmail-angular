@@ -19,26 +19,3 @@
 .icon {
 	width: 20px;
 }
-
-@media (min-width: 769px) {
-
-	.write-button {
-		display: none;
-	}
-
-}
-
-@media (max-width: 768px) {
-
-	.write-button {
-		background-color: #2ca9bc;
-		border: none;
-		grid-area: write;
-	}
-
-	.write-button:hover {
-		background-color: #2896a7;
-
-	}
-
-}
