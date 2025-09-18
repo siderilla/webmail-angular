@@ -1,22 +1,33 @@
-@media (min-width: 769px) {
+// @media (min-width: 769px) {
 
-	.compose-button {
-		display: none;
-	}
+// 	.compose-button {
+// 		display: none;
+// 	}
 
+// }
+
+// @media (max-width: 768px) {
+
+// 	.compose-button {
+// 		background-color: #2ca9bc;
+// 		border: none;
+// 		grid-area: write;
+// 	}
+
+// 	.compose-button:hover {
+// 		background-color: #2896a7;
+
+// 	}
+
+// }
+
+.compose-button {
+	background-color: #2ca9bc;
+	border: none;
+	grid-area: write;
 }
 
-@media (max-width: 768px) {
-
-	.compose-button {
-		background-color: #2ca9bc;
-		border: none;
-		grid-area: write;
-	}
-
-	.compose-button:hover {
-		background-color: #2896a7;
-
-	}
+.compose-button:hover {
+	background-color: #2896a7;
 
 }
