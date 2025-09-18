@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 })
 export class ComposeService {
 
-	API_URL = './../../../public/assets/messages.json'
+	// API_URL = './../../../public/assets/messages.json';
 
 	constructor(private router: Router) {};
 
