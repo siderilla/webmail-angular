@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HeaderPanelComponent } from "../header-panel/header-panel.component";
 
 @Component({
   selector: 'app-compose-page',
-  imports: [],
+  imports: [HeaderPanelComponent],
   templateUrl: './compose-page.component.html',
   styleUrl: './compose-page.component.scss'
 })
