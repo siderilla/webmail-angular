@@ -19,3 +19,11 @@
 .icon {
 	width: 20px;
 }
+
+@media (min-width: 769px) {
+
+	.compose-button {
+		display: none;
+	}
+
+}
