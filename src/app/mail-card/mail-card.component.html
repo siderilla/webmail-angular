@@ -10,8 +10,8 @@
 			(click)="$event.stopPropagation()">
 			<!-- stopPropagation evita in questo caso che l'aggiunta all'array dei selezionati non avvenga due volte -->
 	</div>
-	<div class="col-2 date">{{ message!.date | date:'dd/MM/yyyy' }}</div>
-	<div class="col-2 from">{{ message!.from }}</div>
-	<div class="col-2 subject">{{ message!.subject }}</div>
-	<div class="col-5 preview d-none d-md-block">{{ message!.body }}</div>
+	<div class="col-2 date">{{ mail!.date | date:'dd/MM/yyyy' }}</div>
+	<div class="col-2 from">{{ mail!.from }}</div>
+	<div class="col-2 subject">{{ mail!.subject }}</div>
+	<div class="col-5 preview d-none d-md-block">{{ mail!.body }}</div>
 </div>

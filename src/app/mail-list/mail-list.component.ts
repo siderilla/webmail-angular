@@ -1,7 +1,7 @@
 import { Component, NgModule, Input, EventEmitter, Output } from '@angular/core';
 import { NavActionsComponent } from '../nav-actions/nav-actions.component';
 import { MailCardComponent } from '../mail-card/mail-card.component';
-import { type MessageDetail } from '../model/message-detail';
+import { type Mail } from '../model/mail';
 import { CommonModule } from '@angular/common';
 import { OutletContext } from '@angular/router';
 
@@ -13,39 +13,39 @@ import { OutletContext } from '@angular/router';
 })
 export class MailListComponent {
 
-	private selectedMessages: MessageDetail[] = [];
-	selected?: MessageDetail;
+	private selectedMails: Mail[] = [];
+	selected?: Mail;
 
 	// ricevo dal parent un array di messaggi
-	@Input() messages: MessageDetail[] = [];
+	@Input() mails: Mail[] = [];
 
 
 
 	// hey parent guarda che la selezione del messaggio è cambiata!
-	@Output() selectionChanged = new EventEmitter<MessageDetail[]>();
+	@Output() selectionChanged = new EventEmitter<Mail[]>();
 
 	// emetto l'evento quando i messaggi sono selezionati con popolamento dell'array
-	onSelected(event: { message: MessageDetail; selected: boolean }) {
+	onSelected(event: { mail: Mail; selected: boolean }) {
 		if (event.selected) {
-			this.selectedMessages.push(event.message);
+			this.selectedMails.push(event.mail);
 		} else {
-			this.selectedMessages = this.selectedMessages.filter(m => m !== event.message);
+			this.selectedMails = this.selectedMails.filter(m => m !== event.mail);
 		}
-		this.selectionChanged.emit(this.selectedMessages);
+		this.selectionChanged.emit(this.selectedMails);
 	}
 
 	// hey parent hanno cliccato sulla card da visualizzare
-	@Output() viewMessage = new EventEmitter<MessageDetail>();
+	@Output() viewMail = new EventEmitter<Mail>();
 
 	// rimbalzo l'evento della card cliccata per esser visualizzata al parent
-	onView(message: MessageDetail) {
-		this.selected = message;
-		this.viewMessage.emit(message);
+	onView(mail: Mail) {
+		this.selected = mail;
+		this.viewMail.emit(mail);
 	}
 
 	// ritorna true se il messaggio m è già presente nell'array dei selezionati e quindi se la checkbox deve essere spuntata
-	isSelected(m: MessageDetail): boolean {
-		return this.selectedMessages.includes(m);
+	isSelected(m: Mail): boolean {
+		return this.selectedMails.includes(m);
 	}
 
 }

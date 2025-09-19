@@ -1,6 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { MailActionsComponent } from '../mail-actions/mail-actions.component';
-import { type MessageDetail } from '../model/message-detail';
+import { type Mail } from '../model/mail';
 import { DatePipe } from '@angular/common';
 
 @Component({
@@ -12,6 +12,6 @@ import { DatePipe } from '@angular/common';
 export class MailTextComponent {
 
 	// voglio ricevere il messaggio selezionato per visualizzarlo!
-	@Input() selected!: MessageDetail;
+	@Input() selected!: Mail;
 
 }

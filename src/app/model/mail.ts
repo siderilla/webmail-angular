@@ -1,4 +1,4 @@
-export interface MessageDetail {
+export interface Mail {
 
 	date: Date;
 	from: string;

@@ -24,13 +24,17 @@
     </div>
 
     <div class="d-flex justify-content-end gap-2">
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="submit btn btn-primary">
         <img class="icon me-1" src="assets/sendmail.svg" alt=""> Send now
       </button>
-      <button type="button" class="btn btn-secondary">
+	  
+      <button type="button" 
+	  	class="draft btn btn-secondary"
+	  	(click)="onButtonDraft()">
         <img class="icon me-1" src="assets/save_white.svg" alt=""> Save draft
       </button>
-      <button type="reset" class="btn btn-outline-danger">
+
+      <button type="reset" class="delete btn btn-danger">
         <img class="icon me-1" src="assets/bin_white.svg" alt=""> Discard
       </button>
     </div>

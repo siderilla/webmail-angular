@@ -11,11 +11,11 @@
 	</div>
 	<div>
 		<app-mail-card 
-			*ngFor="let message of messages" 
-			[message]="message"
-			[isSelected]="isSelected(message)"
+			*ngFor="let mail of mails" 
+			[mail]="mail"
+			[isSelected]="isSelected(mail)"
 			(selectionChanged)="onSelected($event)"
-			(viewMessage)="onView($event)">
+			(viewMail)="onView($event)">
 		</app-mail-card>
 	</div>
 </div>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MailTextComponent } from '../mail-text/mail-text.component';
 import { MailListComponent } from '../mail-list/mail-list.component';
-import { type MessageDetail } from '../model/message-detail';
+import { type Mail } from '../model/mail';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class MailViewerComponent {
 
 	// array di messaggi (spostare in json locale):
-	messages: MessageDetail[] = [
+	mail: Mail[] = [
 		{
 			date: new Date("2025-09-17"),
 			from: "mizora@avernus.com",
@@ -62,45 +62,45 @@ export class MailViewerComponent {
 	];
 
 	// inizializzo l'array che si popola di messaggi selezionati:
-	selectedMessages: MessageDetail[] = [];
+	selectedMails: Mail[] = [];
 
 	// inizializzo la variabile di UN messaggio selezionato
-	selected?: MessageDetail;
+	selected?: Mail;
 
 	// sorting dei messaggi per data (dal più recente al più vecchio)
-	sortingMessages(messages: MessageDetail[]) {
-		const ordered = messages.sort((a: MessageDetail, b: MessageDetail) => b.date.getTime() - a.date.getTime());
+	sortingMails(mail: Mail[]) {
+		const ordered = mail.sort((a: Mail, b: Mail) => b.date.getTime() - a.date.getTime());
 		console.log("ordinato per data: ", ordered);
 		return ordered;
 	}
 
 	// inizializzo con un messaggio di partenza, l'ultimo arrivato per data e quindi il primo visualizzato nella lista
 	ngOnInit() {
-		if (this.messages.length > 0) {
-			const ordered = this.sortingMessages(this.messages);
+		if (this.mail.length > 0) {
+			const ordered = this.sortingMails(this.mail);
 			this.selected = ordered[0];
-			this.selectedMessages.push(this.selected);
-			console.log("messaggio visualizzato di default già presente nell'array in partenza ", this.selectedMessages);
+			this.selectedMails.push(this.selected);
+			console.log("messaggio visualizzato di default già presente nell'array in partenza ", this.selectedMails);
 		}
 	}
 
 	// quando cambia la selezione prendo dall'array di selezionati l'ultimo messaggio selezionato e lo aggiorno in selected
-	onSelectionchanged(sel: MessageDetail[]) {
-		this.selectedMessages = sel;
+	onSelectionchanged(sel: Mail[]) {
+		this.selectedMails = sel;
 		this.selected = sel[sel.length - 1]; // ultima selezionata
-		console.log("array di messaggi selezionati: ", this.selectedMessages);
-		console.log("ultimo selezionato: ", this.selected);
+		console.log("array di mail selezionate: ", this.selectedMails);
+		console.log("ultima selezionata: ", this.selected);
 	}
 
 	// quando arriva la richiesta di visualizzazione del messaggio, gli passo il messaggio selezionato
-	onViewMessage(message: MessageDetail) {
-		this.selected = message; // aggiorna subito la mail in visualizzazione
-		console.log("messsaggio visualizzato in mail-text: ", message)
+	onViewMail(mail: Mail) {
+		this.selected = mail; // aggiorna subito la mail in visualizzazione
+		console.log("mail visualizzata in mail-text: ", mail)
 	}
 
 
 	// deleteSelected() {
-	// 	this.messages = this.messages.filter(m => !this.selectedMessages.includes(m));
-	// 	this.selectedMessages = [];
+	// 	this.mails = this.mails.filter(m => !this.selectedMails.includes(m));
+	// 	this.selectedMails = [];
 	// }
 }

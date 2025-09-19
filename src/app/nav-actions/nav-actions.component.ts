@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MessageDetail } from '../model/message-detail';
+import { type Mail } from '../model/mail';
 import { ComposeButtonComponent } from '../compose-button/compose-button.component';
 
 @Component({

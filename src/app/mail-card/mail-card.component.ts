@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { type MessageDetail } from '../model/message-detail';
+import { type Mail } from '../model/mail';
 import { CommonModule, DatePipe } from '@angular/common';
 
 @Component({
@@ -13,7 +13,7 @@ export class MailCardComponent {
 	changeColor: boolean = false;
 
 	// la card visualiza UN messaggio, ergo richiesta di input per UN messaggio
-	@Input() message!: MessageDetail;
+	@Input() mail!: Mail;
 
 	// ricevo dal parent il valore di un messaggio SELEZIONATO, se non mi passa nulla resta false
 	@Input() isSelected = false;
@@ -21,22 +21,22 @@ export class MailCardComponent {
 
 
 	// hey parent guarda che qualcosa nella checkbox è cambiato!
-	@Output() selectionChanged = new EventEmitter<{ message: MessageDetail, selected: boolean }>();
+	@Output() selectionChanged = new EventEmitter<{ mail: Mail, selected: boolean }>();
 
 	// emetto l'evento quando la checkbox cambia
 	onCheckboxChange(e: Event) {
 		const checked = (e.target as HTMLInputElement).checked;
-		this.selectionChanged.emit({ message: this.message, selected: checked });
+		this.selectionChanged.emit({ mail: this.mail, selected: checked });
 	}
 
 
 	
 	// hey parent hanno cliccato sulla card da visualizzare
-	@Output() viewMessage = new EventEmitter<MessageDetail>(); 
+	@Output() viewMail = new EventEmitter<Mail>(); 
 
 	// emetto l'evento quando la card viene cliccata
 	onCardClick() {
-		this.viewMessage.emit(this.message);
+		this.viewMail.emit(this.mail);
 	}
 
 }
