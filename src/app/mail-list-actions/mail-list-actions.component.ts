@@ -3,12 +3,12 @@ import { type Mail } from '../model/mail';
 import { ComposeButtonComponent } from '../compose-button/compose-button.component';
 
 @Component({
-  selector: 'app-nav-actions',
+  selector: 'app-mail-list-actions',
   imports: [ComposeButtonComponent],
-  templateUrl: './nav-actions.component.html',
-  styleUrl: './nav-actions.component.scss'
+  templateUrl: './mail-list-actions.component.html',
+  styleUrl: './mail-list-actions.component.scss'
 })
-export class NavActionsComponent {
+export class MailListActionsComponent {
 
 	// @Input() messageToDelete: MessageDetail;
 

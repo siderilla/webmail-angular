@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { HeaderPanelComponent } from '../header-panel/header-panel.component';
+import { HeaderPanelComponent } from '../header-container/header-panel.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { MailViewerComponent } from '../mail-viewer/mail-viewer.component';
 import { CommonModule } from '@angular/common';

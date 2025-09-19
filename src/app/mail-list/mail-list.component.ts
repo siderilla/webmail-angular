@@ -1,5 +1,5 @@
 import { Component, NgModule, Input, EventEmitter, Output } from '@angular/core';
-import { NavActionsComponent } from '../nav-actions/nav-actions.component';
+import { MailListActionsComponent } from '../mail-list-actions/mail-list-actions.component';
 import { MailCardComponent } from '../mail-card/mail-card.component';
 import { type Mail } from '../model/mail';
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,7 @@ import { OutletContext } from '@angular/router';
 
 @Component({
 	selector: 'app-mail-list',
-	imports: [NavActionsComponent, MailCardComponent, CommonModule],
+	imports: [MailListActionsComponent, MailCardComponent, CommonModule],
 	templateUrl: './mail-list.component.html',
 	styleUrl: './mail-list.component.scss'
 })

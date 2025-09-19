@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { MailTextComponent } from '../mail-text/mail-text.component';
+import { MailInsideComponent } from '../mail-inside/mail-inside.component';
 import { MailListComponent } from '../mail-list/mail-list.component';
 import { type Mail } from '../model/mail';
 import { CommonModule } from '@angular/common';
 
 @Component({
 	selector: 'app-mail-viewer',
-	imports: [MailTextComponent, MailListComponent, CommonModule],
+	imports: [MailInsideComponent, MailListComponent, CommonModule],
 	templateUrl: './mail-viewer.component.html',
 	styleUrl: './mail-viewer.component.scss'
 })

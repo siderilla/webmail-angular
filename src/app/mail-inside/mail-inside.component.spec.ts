@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MailTextComponent } from './mail-text.component';
+import { MailInsideComponent } from './mail-inside.component';
 
-describe('MailTextComponent', () => {
-  let component: MailTextComponent;
-  let fixture: ComponentFixture<MailTextComponent>;
+describe('MailInsideComponent', () => {
+  let component: MailInsideComponent;
+  let fixture: ComponentFixture<MailInsideComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MailTextComponent]
+      imports: [MailInsideComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MailTextComponent);
+    fixture = TestBed.createComponent(MailInsideComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

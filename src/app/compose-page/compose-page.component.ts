@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HeaderPanelComponent } from "../header-panel/header-panel.component";
+import { HeaderPanelComponent } from "../header-container/header-panel.component";
 
 @Component({
 	selector: 'app-compose-page',
@@ -9,7 +9,7 @@ import { HeaderPanelComponent } from "../header-panel/header-panel.component";
 })
 export class ComposePageComponent {
 
-	
+
 
 	onButtonDraft() {
 		throw new Error('Method not implemented.');

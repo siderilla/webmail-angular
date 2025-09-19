@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { AccountComponent } from '../account/account.component';
-import { LogoNameComponent } from '../logo-name/logo-name.component';
-import { SearchBarComponent } from '../search-bar/search-bar.component';
+import { AccountComponent } from '../header-account/account.component';
+import { LogoNameComponent } from '../header-logo/logo-name.component';
+import { SearchBarComponent } from '../header-search/search-bar.component';
 
 @Component({
   selector: 'app-header-panel',

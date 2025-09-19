@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MailListActionsComponent } from './mail-list-actions.component';
 
-import { NavActionsComponent } from './nav-actions.component';
-
-describe('NavActionsComponent', () => {
-  let component: NavActionsComponent;
-  let fixture: ComponentFixture<NavActionsComponent>;
+describe('MailListActionsComponent', () => {
+  let component: MailListActionsComponent;
+  let fixture: ComponentFixture<MailListActionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavActionsComponent]
+      imports: [MailListActionsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NavActionsComponent);
+    fixture = TestBed.createComponent(MailListActionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
