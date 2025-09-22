@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { AccountComponent } from '../header-account/account.component';
-import { LogoNameComponent } from '../header-logo/logo-name.component';
+import { HeaderLogoMenuComponent } from '../header-logo-menu/header-logo-menu.component';
 import { SearchBarComponent } from '../header-search/search-bar.component';
 
 @Component({
   selector: 'app-header-panel',
-  imports: [LogoNameComponent, 
+  imports: [HeaderLogoMenuComponent, 
 	SearchBarComponent, 
 	AccountComponent],
 	

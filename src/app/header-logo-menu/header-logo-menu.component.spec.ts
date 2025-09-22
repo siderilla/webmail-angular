@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoNameComponent } from './logo-name.component';
+import { HeaderLogoMenuComponent } from './header-logo-menu.component';
 
-describe('LogoNameComponent', () => {
-  let component: LogoNameComponent;
-  let fixture: ComponentFixture<LogoNameComponent>;
+describe('HeaderLogoMenuComponent', () => {
+  let component: HeaderLogoMenuComponent;
+  let fixture: ComponentFixture<HeaderLogoMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LogoNameComponent]
+      imports: [HeaderLogoMenuComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LogoNameComponent);
+    fixture = TestBed.createComponent(HeaderLogoMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,10 @@
+<div class="header-left d-flex align-items-center gap-2">
+	<button class="button" (click)="onLogoClick()">
+		<img class="logo" src="assets/webmail-logo.svg" alt="logo">
+	</button>
+	<button class="button botton-menu d-block d-md-none" (click)="onMenuClick()"><img class="icon" src="assets/menu.svg" alt="menu"></button>
+	<span class="h1 title d-none d-md-block mt-1">SUPER WEBMAIL</span>
+</div>
+
+<!-- // non so se è meglio lasciar gestire questa route a questo componente oppure a un servizio 
+// (come ho fatto per il compose, anche se il compose avrà delle funzioni a parte) -->
