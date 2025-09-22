@@ -6,4 +6,6 @@ export interface Mail {
 	subject: string;
 	body: string;
 
+	folder: 'inbox' | 'sent' | 'drafts' | 'trash';
+
 }
