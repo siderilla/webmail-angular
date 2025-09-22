@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 export const routes: Routes = [
 
 	{ path: 'compose', component: ComposePageComponent},
-	{ path: '', component: HomeComponent}
+	{ path: '', component: HomeComponent},
+	{ path: 'home', component: HomeComponent }
 
 ];

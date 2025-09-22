@@ -1,1 +1,54 @@
-"{\n\t\t\tdate: new Date(\"2025-09-17\"),\n\t\t\tfrom: \"mizora@avernus.com\",\n\t\t\tto: \"myself@selfmy.com\",\n\t\t\tsubject: \"Maledizioni infernali\",\n\t\t\tbody: \"Ah, mortale. Vedo che hai osato aprire questa missiva. Una scelta... coraggiosa, anche se alquanto avventata. Le maledizioni infernali non sono semplici superstizioni da taverna, ma catene scolpite nel sangue e nel fuoco dei Nove Inferi.\"\n},\n{\n\t\t\tdate: new Date(\"2025-09-15\"),\n\t\t\tfrom: \"shepard@example.com\",\n\t\t\tto: \"waffle@machine.com\",\n\t\t\tsubject: \"Debriefing\",\n\t\t\tbody: \"Missione terminata. Abbiamo avuto perdite minime, ma la prossima volta servirà più coordinazione. Non possiamo permetterci errori quando la posta in gioco è l'intera galassia.\"\n},\n{\n\t\t\tdate: new Date(\"2025-09-11\"),\n\t\t\tfrom: \"alice@example.com\",\n\t\t\tsubject: \"Caffè?\",\n\t\t\tbody: \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptatum placeat unde quis, pariatur temporibus laudantium beatae eaque voluptas, commodi iste, exercitationem esse dolor aut? Harum vel a repellendus soluta est hic, ut cumque perspiciatis molestias. Dicta enim mollitia ea praesentium deserunt laborum ratione, alias dolore, autem vel nulla quibusdam obcaecati et numquam eligendi? In quia atque quibusdam delectus voluptas eos, facilis similique porro illo quo iusto praesentium quaerat distinctio! Obcaecati distinctio similique quam vel doloribus at reiciendis, hic fuga consequuntur? Quaerat unde fugiat minus pariatur rem sequi quod itaque doloremque numquam, dicta modi eos at porro minima sunt provident?\"\n},\n{\n\t\t\tdate: new Date(\"2025-09-13\"),\n\t\t\tfrom: \"carol@example.com\",\n\t\t\tsubject: \"Meeting aggiornato\",\n\t\t\tbody: \"Il meeting è spostato alle 11:00 in sala A.\"\n},\n{\n\t\t\tdate: new Date(\"2025-09-12\"),\n\t\t\tfrom: \"zimzimzamzum@example.com\",\n\t\t\tsubject: \"Il titolo pià lungo della storia\",\n\t\t\tbody: \"Zim zam me ne sono accorta oraaaaaaaaaaaaa, sistemare di nuovo mobile ingrombro di tutte le proprietà mail (from, subject, preview...)\"\n},\n{\n\t\t\tdate: new Date(\"2025-09-13\"),\n\t\t\tfrom: \"muffin@example.com\",\n\t\t\tsubject: \"Pranzo veloce\",\n\t\t\tbody: \"Ti va un panino veloce al bar sotto?\"\n},\n{\n\t\t\tdate: new Date(\"2025-09-15\"),\n\t\t\tfrom: \"pancake@example.com\",\n\t\t\tto: \"waffle@machine.com\",\n\t\t\tsubject: \"Li mangio tutti\",\n\t\t\tbody: \"Con burro di arachidi e marmellata, parimpampum\"\n}"
+[
+	{
+		"date": "2025-09-17",
+		"from": "mizora@avernus.com",
+		"to": "myself@selfmy.com",
+		"subject": "Maledizioni infernali",
+		"body": "Ah, mortale. Vedo che hai osato aprire questa missiva. Una scelta... coraggiosa, anche se alquanto avventata. Le maledizioni infernali non sono semplici superstizioni da taverna, ma catene scolpite nel sangue e nel fuoco dei Nove Inferi.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-09-15",
+		"from": "shepard@example.com",
+		"to": "waffle@machine.com",
+		"subject": "Debriefing",
+		"body": "Missione terminata. Abbiamo avuto perdite minime, ma la prossima volta servirà più coordinazione. Non possiamo permetterci errori quando la posta in gioco è l'intera galassia.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-09-11",
+		"from": "alice@example.com",
+		"subject": "Caffè?",
+		"body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptatum placeat unde quis, pariatur temporibus laudantium beatae eaque voluptas, commodi iste, exercitationem esse dolor aut? Harum vel a repellendus soluta est hic, ut cumque perspiciatis molestias. Dicta enim mollitia ea praesentium deserunt laborum ratione, alias dolore, autem vel nulla quibusdam obcaecati et numquam eligendi? In quia atque quibusdam delectus voluptas eos, facilis similique porro illo quo iusto praesentium quaerat distinctio! Obcaecati distinctio similique quam vel doloribus at reiciendis, hic fuga consequuntur? Quaerat unde fugiat minus pariatur rem sequi quod itaque doloremque numquam, dicta modi eos at porro minima sunt provident?",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-09-13",
+		"from": "carol@example.com",
+		"subject": "Meeting aggiornato",
+		"body": "Il meeting è spostato alle 11:00 in sala A.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-09-12",
+		"from": "zimzimzamzum@example.com",
+		"subject": "Il titolo pià lungo della storia",
+		"body": "Zim zam me ne sono accorta oraaaaaaaaaaaaa, sistemare di nuovo mobile ingrombro di tutte le proprietà mail",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-09-13",
+		"from": "muffin@example.com",
+		"subject": "Pranzo veloce",
+		"body": "Ti va un panino veloce al bar sotto?",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-09-15",
+		"from": "pancake@example.com",
+		"to": "waffle@machine.com",
+		"subject": "Li mangio tutti",
+		"body": "Con burro di arachidi e marmellata, parimpampum",
+		"folder": "inbox"
+	}
+]

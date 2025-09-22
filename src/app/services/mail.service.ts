@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { type Mail } from '../model/mail';
 
+
 @Injectable({
 	providedIn: 'root'
 })
@@ -27,7 +28,13 @@ export class MailService {
 
 	getAllMails(): Mail[] {
 		const stored = localStorage.getItem(this.storageKey);
-		return stored ? JSON.parse(stored) : [];
+		if (stored) {
+			return JSON.parse(stored).map((m: any) => ({
+				...m,
+				date: new Date(m.date)
+			}));
+		}
+		return [];
 	}
 
 	saveMails(mails: Mail[]): void {

@@ -73,16 +73,17 @@ export class MailViewerComponent {
 	selected?: Mail;
 
 	// sorting dei messaggi per data (dal più recente al più vecchio)
-	sortingMails(mail: Mail[]) {
-		const ordered = mail.sort((a: Mail, b: Mail) => b.date.getTime() - a.date.getTime());
+	sortingMails(mails: Mail[]): Mail[] {
+		const ordered = mails.sort((a: Mail, b: Mail) => b.date.getTime() - a.date.getTime());
 		console.log("ordinato per data: ", ordered);
 		return ordered;
 	}
 
 	// inizializzo con un messaggio di partenza, l'ultimo arrivato per data e quindi il primo visualizzato nella lista
 	ngOnInit() {
-		if (this.mail.length > 0) {
-			const ordered = this.sortingMails(this.mail);
+		this.mails = this.mailService.getAllMails();
+		if (this.mails.length > 0) {
+			const ordered = this.sortingMails(this.mails);
 			this.selected = ordered[0];
 			this.selectedMails.push(this.selected);
 			console.log("messaggio visualizzato di default già presente nell'array in partenza ", this.selectedMails);
@@ -104,8 +105,9 @@ export class MailViewerComponent {
 	}
 
 
-	// deleteSelected() {
-	// 	this.mails = this.mails.filter(m => !this.selectedMails.includes(m));
-	// 	this.selectedMails = [];
-	// }
+	deleteSelected() {
+		this.selectedMails.forEach(m => this.mailService.deleteMail(m));
+		this.mails = this.mailService.getAllMails();
+		this.selectedMails = [];
+	}
 }
