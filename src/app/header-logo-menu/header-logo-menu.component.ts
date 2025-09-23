@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { ButtonsService } from '../services/buttons.service';
+import { MenuService } from '../services/menu.service';
 
 @Component({
 	selector: 'app-header-logo-menu',
@@ -11,14 +11,14 @@ import { ButtonsService } from '../services/buttons.service';
 export class HeaderLogoMenuComponent {
 
 	private router = inject(Router);
-	private buttonsService = inject(ButtonsService)
+	private menuService = inject(MenuService)
 
 	onLogoClick() {
 		this.router.navigate(['/home']);
 	}
 
 	onMenuClick() {
-		this.buttonsService.showSidebar()
+		this.menuService.showSidebar()
 	}
 
 	// non so se è meglio lasciar gestire questa route a questo componente oppure a un servizio 

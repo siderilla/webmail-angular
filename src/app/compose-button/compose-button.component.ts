@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ButtonsService } from '../services/buttons.service';
+import { ComposeService } from '../services/compose.service';
 
 @Component({
 	selector: 'app-compose-button',
@@ -10,10 +10,10 @@ import { ButtonsService } from '../services/buttons.service';
 })
 export class ComposeButtonComponent {
 
-	buttonsService = inject(ButtonsService);
+	composeService = inject(ComposeService);
 
 	onButtonCompose() {
-		this.buttonsService.openCompose();
+		this.composeService.openCompose();
 	}
 
 }
