@@ -21,7 +21,4 @@ export class HeaderLogoMenuComponent {
 		this.menuService.showSidebar()
 	}
 
-	// non so se è meglio lasciar gestire questa route a questo componente oppure a un servizio 
-	// (come ho fatto per il compose, anche se il compose avrà delle funzioni a parte)
-
 }

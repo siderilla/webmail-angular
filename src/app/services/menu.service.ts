@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class MenuService {
 
-	showSidebar() {}
+	showSidebar() {
+		
+	}
   
 }
