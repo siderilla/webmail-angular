@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { ButtonsService } from '../services/buttons.service';
 
 @Component({
 	selector: 'app-header-logo-menu',
@@ -10,15 +11,14 @@ import { Router } from '@angular/router';
 export class HeaderLogoMenuComponent {
 
 	private router = inject(Router);
+	private buttonsService = inject(ButtonsService)
 
 	onLogoClick() {
 		this.router.navigate(['/home']);
 	}
 
 	onMenuClick() {
-		throw new Error('Method not implemented.');
-		// forse dovrei davvero fare un servizio a parte. perché la sidebar non è figlia di nessuno lol
-		// ovvero si ripresenta il problema di troppi input/output da fare nel caso di questo componente non mi sembra pulito né leggibile
+		this.buttonsService.showSidebar()
 	}
 
 	// non so se è meglio lasciar gestire questa route a questo componente oppure a un servizio 

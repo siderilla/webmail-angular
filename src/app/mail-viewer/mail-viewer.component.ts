@@ -13,67 +13,14 @@ import { MailService } from '../services/mail.service';
 })
 export class MailViewerComponent {
 
-	// array di messaggi (spostare in json locale):
-	// mail: Mail[] = [
-	// 	{
-	// 		date: new Date("2025-09-17"),
-	// 		from: "mizora@avernus.com",
-	// 		to: "myself@selfmy.com",
-	// 		subject: "Maledizioni infernali",
-	// 		body: "Ah, mortale. Vedo che hai osato aprire questa missiva. Una scelta... coraggiosa, anche se alquanto avventata. Le maledizioni infernali non sono semplici superstizioni da taverna, ma catene scolpite nel sangue e nel fuoco dei Nove Inferi."
-	// 	},
-	// 	{
-	// 		date: new Date("2025-09-15"),
-	// 		from: "shepard@example.com",
-	// 		to: "waffle@machine.com",
-	// 		subject: "Debriefing",
-	// 		body: "Missione terminata. Abbiamo avuto perdite minime, ma la prossima volta servirà più coordinazione. Non possiamo permetterci errori quando la posta in gioco è l'intera galassia."
-	// 	},
-	// 	{
-	// 		date: new Date("2025-09-11"),
-	// 		from: "alice@example.com",
-	// 		subject: "Caffè?",
-	// 		body: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptatum placeat unde quis, pariatur temporibus laudantium beatae eaque voluptas, commodi iste, exercitationem esse dolor aut? Harum vel a repellendus soluta est hic, ut cumque perspiciatis molestias. Dicta enim mollitia ea praesentium deserunt laborum ratione, alias dolore, autem vel nulla quibusdam obcaecati et numquam eligendi? In quia atque quibusdam delectus voluptas eos, facilis similique porro illo quo iusto praesentium quaerat distinctio! Obcaecati distinctio similique quam vel doloribus at reiciendis, hic fuga consequuntur? Quaerat unde fugiat minus pariatur rem sequi quod itaque doloremque numquam, dicta modi eos at porro minima sunt provident?"
-	// 	},
-	// 	{
-	// 		date: new Date("2025-09-13"),
-	// 		from: "carol@example.com",
-	// 		subject: "Meeting aggiornato",
-	// 		body: "Il meeting è spostato alle 11:00 in sala A."
-	// 	},
-	// 	{
-	// 		date: new Date("2025-09-12"),
-	// 		from: "zimzimzamzum@example.com",
-	// 		subject: "Il titolo pià lungo della storia",
-	// 		body: "Zim zam me ne sono accorta oraaaaaaaaaaaaa, sistemare di nuovo mobile ingrombro di tutte le proprietà mail (from, subject, preview...)"
-	// 	},
-	// 	{
-	// 		date: new Date("2025-09-13"),
-	// 		from: "muffin@example.com",
-	// 		subject: "Pranzo veloce",
-	// 		body: "Ti va un panino veloce al bar sotto?"
-	// 	},
-	// 	{
-	// 		date: new Date("2025-09-15"),
-	// 		from: "pancake@example.com",
-	// 		to: "waffle@machine.com",
-	// 		subject: "Li mangio tutti",
-	// 		body: "Con burro di arachidi e marmellata, parimpampum"
-	// 	}
-	// ];
-
 	private mailService = inject(MailService);
 
-	mails: Mail[] = [];
+	mails$ = this.mailService.mails$;
 
-	// inizializzo l'array che si popola di messaggi selezionati:
 	selectedMails: Mail[] = [];
-
-	// inizializzo la variabile di UN messaggio selezionato
 	selected?: Mail;
 
-	// sorting dei messaggi per data (dal più recente al più vecchio)
-	sortingMails(mails: Mail[]): Mail[] {
+	sortingMailsByDate(mails: Mail[]): Mail[] {
 		const ordered = mails.sort((a: Mail, b: Mail) => b.date.getTime() - a.date.getTime());
 		console.log("ordinato per data: ", ordered);
 		return ordered;
@@ -81,17 +28,16 @@ export class MailViewerComponent {
 
 	// inizializzo con un messaggio di partenza, l'ultimo arrivato per data e quindi il primo visualizzato nella lista
 	ngOnInit() {
-		this.mails = this.mailService.getAllMails();
-		if (this.mails.length > 0) {
-			const ordered = this.sortingMails(this.mails);
-			this.selected = ordered[0];
-			this.selectedMails.push(this.selected);
-			console.log("messaggio visualizzato di default già presente nell'array in partenza ", this.selectedMails);
-		}
+		this.mailService.mails$.subscribe(mails => {
+			if (mails.length > 0 && !this.selected) {
+				this.selected = mails[0];
+				this.selectedMails = [this.selected];
+			}
+		});
 	}
 
 	// quando cambia la selezione prendo dall'array di selezionati l'ultimo messaggio selezionato e lo aggiorno in selected
-	onSelectionchanged(sel: Mail[]) {
+	onSelectionChanged(sel: Mail[]) {
 		this.selectedMails = sel;
 		this.selected = sel[sel.length - 1]; // ultima selezionata
 		console.log("array di mail selezionate: ", this.selectedMails);
@@ -100,14 +46,13 @@ export class MailViewerComponent {
 
 	// quando arriva la richiesta di visualizzazione del messaggio, gli passo il messaggio selezionato
 	onViewMail(mail: Mail) {
-		this.selected = mail; // aggiorna subito la mail in visualizzazione
+		this.selected = mail;
 		console.log("mail visualizzata in mail-text: ", mail)
 	}
 
 
-	deleteSelected() {
-		this.selectedMails.forEach(m => this.mailService.deleteMail(m));
-		this.mails = this.mailService.getAllMails();
-		this.selectedMails = [];
-	}
+	// deleteSelected() {
+	// 	this.selectedMails.forEach(m => this.mailService.deleteMail(m));
+	// 	this.selectedMails = [];
+	// }
 }

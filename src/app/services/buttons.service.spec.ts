@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ComposeService } from './compose.service';
+import { ButtonsService } from './buttons.service';
 
-describe('ComposeService', () => {
-  let service: ComposeService;
+describe('ButtonsService', () => {
+  let service: ButtonsService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ComposeService);
+    service = TestBed.inject(ButtonsService);
   });
 
   it('should be created', () => {

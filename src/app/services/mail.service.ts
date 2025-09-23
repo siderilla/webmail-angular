@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { type Mail } from '../model/mail';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Injectable({
@@ -12,6 +13,9 @@ export class MailService {
 	private apiUrl = '/assets/mails.json';
 	private storageKey = 'mails';
 
+	private mailsSubject = new BehaviorSubject<Mail[]>([]);
+	public mails$ = this.mailsSubject.asObservable();
+
 	constructor() {
 		this.initMails();
 	}
@@ -19,36 +23,52 @@ export class MailService {
 	private initMails(): void {
 		const stored = localStorage.getItem(this.storageKey);
 
-		if (!stored) {
+		if (stored) {
+			this.updateSubject(JSON.parse(stored));
+		} else {
 			this.http.get<Mail[]>(this.apiUrl).subscribe(data => {
 				localStorage.setItem(this.storageKey, JSON.stringify(data));
+				this.updateSubject(data);
 			});
 		}
 	}
 
-	getAllMails(): Mail[] {
-		const stored = localStorage.getItem(this.storageKey);
-		if (stored) {
-			return JSON.parse(stored).map((m: any) => ({
-				...m,
-				date: new Date(m.date)
-			}));
-		}
-		return [];
+	private updateSubject(data: Mail[]): void {
+		const mails = data.map(m => ({
+			...m,
+			date: new Date(m.date)
+		}));
+		this.mailsSubject.next(mails);
 	}
 
-	saveMails(mails: Mail[]): void {
-		localStorage.setItem(this.storageKey, JSON.stringify(mails));
-	}
+	// getAllMails(): Mail[] {
+	// 	const stored = localStorage.getItem(this.storageKey);
+	// 	if (stored) {
+	// 		return JSON.parse(stored).map((m: any) => ({
+	// 			...m,
+	// 			date: new Date(m.date)
+	// 		}));
+	// 	}
 
-	deleteMail(mail: Mail): void {
-		const mails = this.getAllMails().filter(m => m !== mail);
-		this.saveMails(mails);
-	}
+	// 	this.http.get<Mail[]>(this.apiUrl).subscribe(data => {
+	// 		localStorage.setItem(this.storageKey, JSON.stringify(data));
+	// 	});
 
-	getMailsByFolder(folder: Mail['folder']): Mail[] {
-		return 	this.getAllMails()
-					.filter(m => m.folder === folder);
-	}
+	// 	return [];
+	// }
+
+	// saveMails(mails: Mail[]): void {
+	// 	localStorage.setItem(this.storageKey, JSON.stringify(mails));
+	// }
+
+	// deleteMail(mail: Mail): void {
+	// 	const mails = this.getAllMails().filter(m => m !== mail);
+	// 	this.saveMails(mails);
+	// }
+
+	// getMailsByFolder(folder: Mail['folder']): Mail[] {
+	// 	return this.getAllMails()
+	// 		.filter(m => m.folder === folder);
+	// }
 
 }
