@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MailInsideComponent } from './mail-inside.component';
+import { MailDetailComponent } from './mail-detail.component';
 
-describe('MailInsideComponent', () => {
-  let component: MailInsideComponent;
-  let fixture: ComponentFixture<MailInsideComponent>;
+describe('MailDetailComponent', () => {
+  let component: MailDetailComponent;
+  let fixture: ComponentFixture<MailDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MailInsideComponent]
+      imports: [MailDetailComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MailInsideComponent);
+    fixture = TestBed.createComponent(MailDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

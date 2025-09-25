@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { MailInsideComponent } from '../mail-inside/mail-inside.component';
+import { MailDetailComponent } from '../mail-inside/mail-detail.component';
 import { MailListComponent } from '../mail-list/mail-list.component';
 import { type Mail } from '../model/mail';
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,7 @@ import { MailService } from '../services/mail.service';
 
 @Component({
 	selector: 'app-mail-viewer',
-	imports: [MailInsideComponent, MailListComponent, CommonModule],
+	imports: [MailDetailComponent, MailListComponent, CommonModule],
 	templateUrl: './mail-viewer.component.html',
 	styleUrl: './mail-viewer.component.scss'
 })
@@ -30,8 +30,11 @@ export class MailViewerComponent {
 	ngOnInit() {
 		this.mailService.mails$.subscribe(mails => {
 			if (mails.length > 0 && !this.selected) {
-				this.selected = mails[0];
-				this.selectedMails = [this.selected];
+				const ordered = this.sortingMailsByDate(mails);
+				this.selected = ordered[0];
+				this.selectedMails = [];
+				console.log("ultima selezionata: ", this.selected);
+
 			}
 		});
 	}
@@ -39,15 +42,13 @@ export class MailViewerComponent {
 	// quando cambia la selezione prendo dall'array di selezionati l'ultimo messaggio selezionato e lo aggiorno in selected
 	onSelectionChanged(sel: Mail[]) {
 		this.selectedMails = sel;
-		this.selected = sel[sel.length - 1]; // ultima selezionata
 		console.log("array di mail selezionate: ", this.selectedMails);
-		console.log("ultima selezionata: ", this.selected);
 	}
 
 	// quando arriva la richiesta di visualizzazione del messaggio, gli passo il messaggio selezionato
 	onViewMail(mail: Mail) {
 		this.selected = mail;
-		console.log("mail visualizzata in mail-text: ", mail)
+		console.log("mail visualizzata in mail-inside: ", mail)
 	}
 
 	onMasterCheckboxChanged(mailsChecked: boolean) {
