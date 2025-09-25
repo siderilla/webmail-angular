@@ -19,7 +19,6 @@ export class MailCardComponent {
 	@Input() isSelected = false;
 
 
-
 	// hey parent guarda che qualcosa nella checkbox è cambiato!
 	@Output() selectionChanged = new EventEmitter<{ mail: Mail, selected: boolean }>();
 

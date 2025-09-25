@@ -13,13 +13,11 @@ import { OutletContext } from '@angular/router';
 })
 export class MailListComponent {
 
-	private selectedMails: Mail[] = [];
+	@Input() selectedMails: Mail[] = [];
 	selected?: Mail;
 
 	// ricevo dal parent un array di messaggi
 	@Input() mails: Mail[] = [];
-
-
 
 	// hey parent guarda che la selezione del messaggio è cambiata!
 	@Output() selectionChanged = new EventEmitter<Mail[]>();
@@ -46,6 +44,14 @@ export class MailListComponent {
 	// ritorna true se il messaggio m è già presente nell'array dei selezionati e quindi se la checkbox deve essere spuntata
 	isSelected(m: Mail): boolean {
 		return this.selectedMails.includes(m);
+	}
+
+	@Output() masterCheckboxChanged = new EventEmitter<boolean>();
+
+	onMasterCheckbox(e: Event) {
+		const mailsChecked = (e.target as HTMLInputElement).checked;
+		this.masterCheckboxChanged.emit(mailsChecked);
+		this.selectionChanged.emit(mailsChecked ? [...this.mails] : []);
 	}
 
 }

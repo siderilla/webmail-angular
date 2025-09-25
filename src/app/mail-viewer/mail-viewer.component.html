@@ -1,13 +1,14 @@
 <div class="mail-list flex-grow-1">
 	<app-mail-list 
-		[mails]="(mails$ | async) ?? []"
-		(selectionChanged)="onSelectionChanged($event)"
-		(viewMail)="onViewMail($event)">
+		[mails]="(mails$ | async) ?? []" (selectionChanged)="onSelectionChanged($event)"
+		(viewMail)="onViewMail($event)"
+		(masterCheckboxChanged)="onMasterCheckboxChanged($event)"
+		[selectedMails]="selectedMails">
 	</app-mail-list>
 </div>
 
 <hr class="divider">
 
 <div class="mail-viewer flex-grow-1">
-	  <app-mail-inside *ngIf="selected" [selected]="selected"></app-mail-inside>
+	<app-mail-inside *ngIf="selected" [selected]="selected"></app-mail-inside>
 </div>

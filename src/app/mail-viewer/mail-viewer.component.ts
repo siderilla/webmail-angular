@@ -50,6 +50,9 @@ export class MailViewerComponent {
 		console.log("mail visualizzata in mail-text: ", mail)
 	}
 
+	onMasterCheckboxChanged(mailsChecked: boolean) {
+		console.log(mailsChecked);
+	}
 
 	// deleteSelected() {
 	// 	this.selectedMails.forEach(m => this.mailService.deleteMail(m));
