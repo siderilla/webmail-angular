@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
 export class SidebarComponent {
 
 	composeService = inject(ComposeService);
-
 	isModalVisible$ = this.composeService.isModalVisible$;
 
 }
