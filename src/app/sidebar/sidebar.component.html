@@ -1,4 +1,8 @@
-<app-compose-button class="compose-button"></app-compose-button>
+<app-compose-button></app-compose-button>
+<app-compose-modal 
+  *ngIf="isModalVisible$ | async" 
+  (close)="composeService.closeModal()">
+</app-compose-modal>
 
 <!-- <button class="btn btn-primary w-100 mb-3 button-compose" type="button"
 	onclick="window.open('compose.html','targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=500')">
