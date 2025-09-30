@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="d-flex justify-content-end gap-2">
-			<button type="submit" class="submit btn btn-primary">
+			<button type="submit" class="submit btn btn-primary" (click)="onButtonSend()">
 				<img class="icon me-1" src="assets/sendmail.svg" alt=""> Send now
 			</button>
 
@@ -31,7 +31,7 @@
 				<img class="icon me-1" src="assets/save_white.svg" alt=""> Save draft
 			</button>
 
-			<button type="reset" class="delete btn btn-danger">
+			<button type="reset" class="delete btn btn-danger" (click)="onButtonDiscard()">
 				<img class="icon me-1" src="assets/bin_white.svg" alt=""> Discard
 			</button>
 		</div>
