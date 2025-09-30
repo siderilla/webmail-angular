@@ -15,6 +15,18 @@ export class ModalService {
 	private modalSubject = new BehaviorSubject<boolean>(false);
 	isModalVisible$ = this.modalSubject.asObservable();
 
+	constructor() {
+		this.breakpointObserver
+			.observe('(min-width: 768px)')
+			.subscribe(state => {
+				const isDesktop = state.matches;
+
+				if (isDesktop && this.router.url === '/compose') {
+					this.router.navigate(['']);
+				}
+		});
+	}
+
 	openCompose() {
 		const isDesktop = this.breakpointObserver.isMatched('(min-width: 768px)');
 		if (isDesktop) {
