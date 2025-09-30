@@ -1,35 +1,25 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { inject, Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { ModalService } from './modal.service';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class ComposeActionService {
 
-	private router = inject(Router);
-	private breakpointObserver = inject(BreakpointObserver);
+	private modal = inject(ModalService);
 
-	private modalSubject = new BehaviorSubject<boolean>(false);
-	isModalVisible$ = this.modalSubject.asObservable();
-
-
-	isMobile() {
-		if (this.breakpointObserver.isMatched('(max-width: 768px)')) {
-			console.log("Send on desktop → salva in sent");
-		} else {
-			this.router.navigate(['/home']);
-		}
+	send() {
+		console.log("Mail sent");
+		this.modal.closeModal();
 	}
 
-
-	closeModal() {
-		this.modalSubject.next(false);
+	draft() {
+		console.log("Draft saved");
+		this.modal.closeModal();
 	}
 
-	saveInSent() {
-		console.log("Mail sent and saved in sent folder")
+	discard() {
+		console.log("Mail discarded");
+		this.modal.closeModal();
 	}
-
 }

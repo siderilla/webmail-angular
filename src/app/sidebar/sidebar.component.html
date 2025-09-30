@@ -1,7 +1,7 @@
 <app-compose-button></app-compose-button>
 <app-compose-modal 	
 		*ngIf="isModalVisible$ | async"
-		(close)="composeActionsService.closeModal()">
+		(close)="modalService.closeModal()">
 
 	<app-compose-form></app-compose-form>
 

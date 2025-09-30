@@ -12,17 +12,14 @@ export class ComposeFormComponent {
 	private composeActionsService = inject(ComposeActionService)
 
 	onButtonSend() {
-		this.composeActionsService.saveInSent();
-		this.composeActionsService.closeModal();
+		this.composeActionsService.send();
 	}
 
 	onButtonDraft() {
-		this.composeActionsService.closeModal();
-		console.log('Save as draft');
+		this.composeActionsService.draft();
 	}
 
 	onButtonDiscard() {
-		this.composeActionsService.closeModal();
-		console.log("Mail discarded");
+		this.composeActionsService.discard();
 	}
 }

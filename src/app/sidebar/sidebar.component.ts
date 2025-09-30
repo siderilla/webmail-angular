@@ -3,7 +3,7 @@ import { ComposeButtonComponent } from '../compose-button/compose-button.compone
 import { ComposeModalComponent } from "../compose-modal/compose-modal.component";
 import { CommonModule } from '@angular/common';
 import { ComposeFormComponent } from "../compose-page/compose-form.component";
-import { ComposeActionService } from '../services/composeActions.service';
+import { ModalService } from '../services/modal.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,7 +13,7 @@ import { ComposeActionService } from '../services/composeActions.service';
 })
 export class SidebarComponent {
 
-	composeActionsService = inject(ComposeActionService)
-	isModalVisible$ = this.composeActionsService.isModalVisible$;
+	modalService = inject(ModalService)
+	isModalVisible$ = this.modalService.isModalVisible$;
 
 }
