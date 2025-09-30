@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { inject, Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 
@@ -7,11 +9,19 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ModalService {
 
+	private router = inject(Router);
+	private breakpointObserver = inject(BreakpointObserver);
+
 	private modalSubject = new BehaviorSubject<boolean>(false);
 	isModalVisible$ = this.modalSubject.asObservable();
 
-	openModal() {
-		this.modalSubject.next(true);
+	openCompose() {
+		const isDesktop = this.breakpointObserver.isMatched('(min-width: 768px)');
+		if (isDesktop) {
+			this.modalSubject.next(true);
+		} else {
+			this.router.navigate(['/compose']);
+		}
 	}
 
 	closeModal() {

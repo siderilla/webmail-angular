@@ -13,7 +13,7 @@ export class ComposeButtonComponent {
 	modalService = inject(ModalService);
 
 	onButtonCompose() {
-		this.modalService.openModal();
+		this.modalService.openCompose();
 	}
 
 }
