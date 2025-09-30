@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuService } from '../services/menu.service';
 
@@ -18,7 +18,7 @@ export class HeaderLogoMenuComponent {
 	}
 
 	onMenuClick() {
-		this.menuService.showSidebar()
+		this.menuService.toggleSidebar();
 	}
 
 }

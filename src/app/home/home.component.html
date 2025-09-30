@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<nav class="sidebar-container col-2 d-flex flex-column p-3 d-none d-md-block">
+		<nav class="sidebar-container col-2 d-flex flex-column p-3 d-none d-md-block" *ngIf="this.menuService.sidebarVisible$ | async" class="sidebar">
 			<app-sidebar></app-sidebar>
 		</nav>
 

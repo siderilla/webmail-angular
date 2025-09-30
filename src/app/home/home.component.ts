@@ -3,6 +3,7 @@ import { HeaderPanelComponent } from '../header-container/header-panel.component
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { MailViewerComponent } from '../mail-viewer/mail-viewer.component';
 import { CommonModule } from '@angular/common';
+import { MenuService } from '../services/menu.service';
 
 @Component({
 	selector: 'app-home',
@@ -11,5 +12,7 @@ import { CommonModule } from '@angular/common';
 	styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+	menuService = inject(MenuService);
 
 }
