@@ -3,10 +3,11 @@ import { ComposeButtonComponent } from '../compose-button/compose-button.compone
 import { ComposeModalComponent } from "../compose-modal/compose-modal.component";
 import { ComposeService } from '../services/compose.service';
 import { CommonModule } from '@angular/common';
+import { ComposeFormComponent } from "../compose-page/compose-form.component";
 
 @Component({
   selector: 'app-sidebar',
-  imports: [ComposeButtonComponent, ComposeModalComponent, CommonModule],
+  imports: [ComposeButtonComponent, ComposeModalComponent, CommonModule, ComposeFormComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })

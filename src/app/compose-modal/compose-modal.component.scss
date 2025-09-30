@@ -20,3 +20,24 @@
 	width: 100%;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+.button-close {
+	display: flex;
+	align-self: flex-end;
+	appearance: none;
+	background-image: none;
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	border-radius: 20%;
+}
+
+.button-close:hover {
+	background-color: rgb(230, 230, 230);
+	border-radius: 20%;
+	align-content: center;
+}
+
+.icon {
+	width: 20px;
+}

@@ -1,7 +1,8 @@
 <div class="modal-overlay" (click)="closeModal()">
 	<div class="modal-content" (click)="$event.stopPropagation()">
-		<h2>Modal Title</h2>
+		<button class="button-close" (click)="closeModal()">
+			<img class="icon" src="assets/close.svg" alt="close">
+		</button>
 		<ng-content></ng-content>
-		<button (click)="closeModal()">Close</button>
 	</div>
 </div>
