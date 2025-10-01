@@ -2,12 +2,23 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<nav class="sidebar-container col-2 d-flex flex-column p-3 d-none d-md-block" *ngIf="this.menuService.sidebarVisible$ | async" class="sidebar">
+
+		<nav class="sidebar-container col-2 d-none d-md-flex flex-column p-3">
 			<app-sidebar></app-sidebar>
 		</nav>
 
-		<div class="mail-container col-10 d-flex flex-column p-3 overflow-hidden flex-grow-1">
+		<div class="sidebar-overlay d-md-none" *ngIf="menuService.sidebarVisible$ | async">
+			<div class="sidebar-mobile">
+				<button class="btn close-button" (click)="menuService.closeSidebar()">
+					<img class="icon" src="assets/close.svg" alt="close">
+				</button>
+				<app-sidebar></app-sidebar>
+			</div>
+		</div>
+
+		<div class="mail-container col d-flex flex-column p-3 overflow-hidden flex-grow-1">
 			<app-mail-viewer></app-mail-viewer>
 		</div>
+
 	</div>
 </div>
