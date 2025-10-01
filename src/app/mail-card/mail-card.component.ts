@@ -18,7 +18,8 @@ export class MailCardComponent {
 	// ricevo dal parent il valore di un messaggio SELEZIONATO, se non mi passa nulla resta false
 	@Input() isSelected = false;
 
-
+	@Input() isOpened = false;
+	
 	// hey parent guarda che qualcosa nella checkbox è cambiato!
 	@Output() selectionChanged = new EventEmitter<{ mail: Mail, selected: boolean }>();
 
@@ -29,9 +30,9 @@ export class MailCardComponent {
 	}
 
 
-	
+
 	// hey parent hanno cliccato sulla card da visualizzare
-	@Output() viewMail = new EventEmitter<Mail>(); 
+	@Output() viewMail = new EventEmitter<Mail>();
 
 	// emetto l'evento quando la card viene cliccata
 	onCardClick() {

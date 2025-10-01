@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { MailDetailComponent } from '../mail-inside/mail-detail.component';
+import { MailDetailComponent } from '../mail-detail/mail-detail.component';
 import { MailListComponent } from '../mail-list/mail-list.component';
 import { type Mail } from '../model/mail';
 import { CommonModule } from '@angular/common';

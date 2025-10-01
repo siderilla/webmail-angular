@@ -1,5 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
-import { MailDetailActionsComponent } from '../mail-inside-actions/mail-detail-actions.component';
+import { MailDetailActionsComponent } from '../mail-detail-actions/mail-detail-actions.component';
 import { type Mail } from '../model/mail';
 import { DatePipe } from '@angular/common';
 

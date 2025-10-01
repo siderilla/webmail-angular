@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ComposeActionService } from '../services/composeActions.service';
+import { ComposeService } from '../services/compose.service';
 import { HeaderPanelComponent } from "../header-container/header-panel.component";
 import { CommonModule } from '@angular/common';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -12,20 +12,20 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class ComposeFormComponent {
 
-	private composeActionsService = inject(ComposeActionService);
+	private composeService = inject(ComposeService);
 	private breakpointObserver = inject(BreakpointObserver);
 
 	isMobile$ = this.breakpointObserver.isMatched('(max-width: 768px');
 
 	onButtonSend() {
-		this.composeActionsService.send();
+		this.composeService.send();
 	}
 
 	onButtonDraft() {
-		this.composeActionsService.draft();
+		this.composeService.draft();
 	}
 
 	onButtonDiscard() {
-		this.composeActionsService.discard();
+		this.composeService.discard();
 	}
 }

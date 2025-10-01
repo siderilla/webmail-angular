@@ -7,7 +7,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 @Injectable({
 	providedIn: 'root'
 })
-export class ComposeActionService {
+export class ComposeService {
 
 	private router = inject(Router);
 	private modal = inject(ModalService);
