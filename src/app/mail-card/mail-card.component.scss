@@ -6,8 +6,12 @@
 	background-color: rgb(247, 247, 247);
 }
 
-.selection-border {
-	border-left: solid 2px blue;
+.opened-border {
+	border-left: solid 3px transparent;
+}
+
+.opened-border.active {
+	border-left: solid 3px #2ca9bc;
 }
 
 @media (min-width: 769px) {

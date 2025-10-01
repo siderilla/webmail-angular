@@ -1,6 +1,6 @@
-<div class="mail-row row align-items-center border-bottom py-2" 
+<div class="mail-row row opened-border align-items-center border-bottom py-2" 
 	(click)="onCardClick()"
-	[ngClass]="{ 'highlight': changeColor }"
+	[ngClass]="{ 'highlight': changeColor, 'active': isOpened }"
 	(mouseover)="changeColor = true" 
 	(mouseleave)="changeColor = false">
 	<div class="col-1 checkbox">
