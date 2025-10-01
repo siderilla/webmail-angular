@@ -17,6 +17,7 @@
 			*ngFor="let mail of mails" 
 			[mail]="mail"
 			[isSelected]="isSelected(mail)"
+			[isOpened]="openedMail === mail"
 			(selectionChanged)="onSelected($event)"
 			(viewMail)="onView($event)">
 		</app-mail-card>

@@ -12,6 +12,6 @@ import { DatePipe } from '@angular/common';
 export class MailDetailComponent {
 
 	// voglio ricevere il messaggio selezionato per visualizzarlo!
-	@Input() selected!: Mail;
+	@Input() openedMail!: Mail;
 
 }

@@ -12,27 +12,19 @@ export class MailCardComponent {
 
 	changeColor: boolean = false;
 
-	// la card visualiza UN messaggio, ergo richiesta di input per UN messaggio
-	@Input() mail!: Mail;
-
-	// ricevo dal parent il valore di un messaggio SELEZIONATO, se non mi passa nulla resta false
-	@Input() isSelected = false;
-
+	@Input() mail!: Mail; // richiesta di input per una mail
+	@Input() isSelected = false; 
 	@Input() isOpened = false;
-	
-	// hey parent guarda che qualcosa nella checkbox è cambiato!
-	@Output() selectionChanged = new EventEmitter<{ mail: Mail, selected: boolean }>();
 
+	@Output() selectionChanged = new EventEmitter<{ mail: Mail, selected: boolean }>(); // hey parent guarda che qualcosa nella checkbox è cambiato!
+	@Output() viewMail = new EventEmitter<Mail>(); // hey parent hanno cliccato sulla card da visualizzare
+
+	
 	// emetto l'evento quando la checkbox cambia
 	onCheckboxChange(e: Event) {
 		const checked = (e.target as HTMLInputElement).checked;
 		this.selectionChanged.emit({ mail: this.mail, selected: checked });
 	}
-
-
-
-	// hey parent hanno cliccato sulla card da visualizzare
-	@Output() viewMail = new EventEmitter<Mail>();
 
 	// emetto l'evento quando la card viene cliccata
 	onCardClick() {

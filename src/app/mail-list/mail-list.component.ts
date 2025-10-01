@@ -13,16 +13,17 @@ import { OutletContext } from '@angular/router';
 })
 export class MailListComponent {
 
-	@Input() selectedMails: Mail[] = [];
 	selected?: Mail;
 
-	// ricevo dal parent un array di messaggi
-	@Input() mails: Mail[] = [];
+	@Input() selectedMails: Mail[] = [];
+	@Input() mails: Mail[] = []; // ricevo dal parent un array di mail
+	@Input() openedMail?: Mail;
 
-	// hey parent guarda che la selezione del messaggio è cambiata!
-	@Output() selectionChanged = new EventEmitter<Mail[]>();
+	@Output() selectionChanged = new EventEmitter<Mail[]>(); // hey parent guarda che la selezione della mail è cambiata!
+	@Output() viewMail = new EventEmitter<Mail>(); 	// hey parent hanno cliccato sulla card da visualizzare
+	@Output() masterCheckboxChanged = new EventEmitter<boolean>(); // click sulla checkbox MASTER
 
-	// emetto l'evento quando i messaggi sono selezionati con popolamento dell'array
+	// emetto l'evento quando le mail sono selezionate con popolamento dell'array
 	onSelected(event: { mail: Mail; selected: boolean }) {
 		if (event.selected) {
 			this.selectedMails.push(event.mail);
@@ -32,26 +33,21 @@ export class MailListComponent {
 		this.selectionChanged.emit(this.selectedMails);
 	}
 
-	// hey parent hanno cliccato sulla card da visualizzare
-	@Output() viewMail = new EventEmitter<Mail>();
-
 	// rimbalzo l'evento della card cliccata per esser visualizzata al parent
 	onView(mail: Mail) {
-		this.selected = mail;
+		this.openedMail = mail;
 		this.viewMail.emit(mail);
 	}
-
-	// ritorna true se il messaggio m è già presente nell'array dei selezionati e quindi se la checkbox deve essere spuntata
-	isSelected(m: Mail): boolean {
-		return this.selectedMails.includes(m);
-	}
-
-	@Output() masterCheckboxChanged = new EventEmitter<boolean>();
 
 	onMasterCheckbox(e: Event) {
 		const mailsChecked = (e.target as HTMLInputElement).checked;
 		this.masterCheckboxChanged.emit(mailsChecked);
 		this.selectionChanged.emit(mailsChecked ? [...this.mails] : []);
+	}
+
+	// ritorna true se la mail m è già presente nell'array delle selezionate e quindi se la checkbox deve essere spuntata
+	isSelected(m: Mail): boolean {
+		return this.selectedMails.includes(m);
 	}
 
 }

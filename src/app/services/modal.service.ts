@@ -15,6 +15,7 @@ export class ModalService {
 	private modalSubject = new BehaviorSubject<boolean>(false);
 	isModalVisible$ = this.modalSubject.asObservable();
 
+	//per evitare che se cambio la viewport mentre è aperta la /compose da mobile a desktop, rimanga su /compose
 	constructor() {
 		this.breakpointObserver
 			.observe('(min-width: 768px)')
@@ -22,7 +23,7 @@ export class ModalService {
 				const isDesktop = state.matches;
 
 				if (isDesktop && this.router.url === '/compose') {
-					this.router.navigate(['']);
+					this.router.navigate(['']); //per ora reindirizza ma la modale resta chiusa
 				}
 		});
 	}

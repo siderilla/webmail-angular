@@ -19,6 +19,7 @@ export class MailViewerComponent {
 
 	selectedMails: Mail[] = [];
 	selected?: Mail;
+	openedMail?: Mail;
 
 	sortingMailsByDate(mails: Mail[]): Mail[] {
 		const ordered = mails.sort((a: Mail, b: Mail) => b.date.getTime() - a.date.getTime());
@@ -26,15 +27,13 @@ export class MailViewerComponent {
 		return ordered;
 	}
 
-	// inizializzo con un messaggio di partenza, l'ultimo arrivato per data e quindi il primo visualizzato nella lista
+	// avvio l'app e voglio vedere in detail l'ultima mail arrivata (openedMail) e poi gestisco l'ultima cliccata
 	ngOnInit() {
 		this.mailService.mails$.subscribe(mails => {
-			if (mails.length > 0 && !this.selected) {
+			if (mails.length > 0 && !this.openedMail) {
 				const ordered = this.sortingMailsByDate(mails);
-				this.selected = ordered[0];
-				this.selectedMails = [];
-				console.log("ultima selezionata: ", this.selected);
-
+				this.openedMail = ordered[0];
+				console.log("mail più recente: ", this.openedMail);
 			}
 		});
 	}
@@ -47,8 +46,8 @@ export class MailViewerComponent {
 
 	// quando arriva la richiesta di visualizzazione del messaggio, gli passo il messaggio selezionato
 	onViewMail(mail: Mail) {
-		this.selected = mail;
-		console.log("mail visualizzata in mail-inside: ", mail)
+		this.openedMail = mail;
+		console.log("mail visualizzata in mail-detail dopo un click: ", mail)
 	}
 
 	onMasterCheckboxChanged(mailsChecked: boolean) {
