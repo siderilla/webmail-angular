@@ -1,6 +1,6 @@
 <div class="toolbar mb-3">
 	<app-compose-button class="compose-button"></app-compose-button>
-	<div class="actions-container" *ngIf="showActionButtons | async">
+	<div class="actions-container" *ngIf="isSelected">
 		<button class="button" (click)="onDeleteClick()">
 			<img class="icon" src="assets/bin.svg" alt="delete">
 		</button>

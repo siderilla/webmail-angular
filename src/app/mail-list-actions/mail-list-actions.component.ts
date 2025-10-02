@@ -14,10 +14,7 @@ export class MailListActionsComponent {
 
 	mailService = inject(MailService)
 
-	@Input() mail!: Mail; // richiesta di input per una mail
-	@Input() isSelected = true; 
-
-	@Output() showActionButtons = new EventEmitter<boolean>();
+	@Input() isSelected = false; 
 
 	onDeleteClick() {
 		// changefolderrrrtotrassshhhh;
