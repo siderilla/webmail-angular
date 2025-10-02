@@ -10,6 +10,6 @@ import { ComposeButtonComponent } from '../compose-button/compose-button.compone
 })
 export class MailListActionsComponent {
 
-	// @Input() messageToDelete: MessageDetail;
+	
 
 }

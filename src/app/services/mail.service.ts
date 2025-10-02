@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { type Mail } from '../model/mail';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, combineLatest, map } from 'rxjs';
 
 
 @Injectable({
@@ -15,6 +15,9 @@ export class MailService {
 
 	private mailsSubject = new BehaviorSubject<Mail[]>([]);
 	public mails$ = this.mailsSubject.asObservable();
+
+	private currentFolderSubject = new BehaviorSubject<Mail['folder']>('inbox');
+	public currentFolder$ = this.currentFolderSubject.asObservable();
 
 	constructor() {
 		this.initMails();
@@ -40,6 +43,26 @@ export class MailService {
 		}));
 		this.mailsSubject.next(mails);
 	}
+
+	setCurrentFolder(folder: Mail['folder']) {
+		this.currentFolderSubject.next(folder)
+	}
+
+	filteredMails$ = combineLatest([
+		this.mails$,
+		this.currentFolder$
+	]).pipe(
+		map(([mails, folder]) => mails.filter(m => m.folder === folder))
+	);
+
+
+
+	
+
+	// getInbox(): Mail[] {
+	// 	return this.mails.filter(m => m.folder === 'inbox');
+	// }
+
 
 	// getAllMails(): Mail[] {
 	// 	const stored = localStorage.getItem(this.storageKey);

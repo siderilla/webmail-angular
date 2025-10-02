@@ -1,10 +1,59 @@
 [
 	{
+		"date": "2025-07-24",
+		"from": "newsletter@healthplus.com",
+		"subject": "Consiglio della settimana",
+		"body": "Bevi almeno 2 litri di acqua al giorno. Sembra banale, ma è la base di una buona salute.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-22",
+		"from": "support@university.com",
+		"subject": "Iscrizione confermata",
+		"body": "Gentile studente, la sua iscrizione al corso di Informatica è stata confermata. Le lezioni inizieranno il 1° ottobre.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-22",
+		"from": "newsletter@bookclub.com",
+		"subject": "Libro del mese",
+		"body": "Questo mese leggiamo insieme 'Il nome della rosa'. Partecipa alle discussioni sul nostro forum dedicato.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-22",
+		"from": "newsletter@fashionmag.com",
+		"subject": "Moda autunno",
+		"body": "Le nuove tendenze per l’autunno: colori caldi, tessuti morbidi e accessori oversize. Sfoglia il nostro catalogo completo.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-19",
+		"from": "newsletter@gaminghub.com",
+		"subject": "Nuovo DLC",
+		"body": "È uscito il nuovo DLC di CyberWarriors! Include 3 missioni aggiuntive, armi esclusive e un finale alternativo.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-19",
+		"from": "newsletter@scienceworld.com",
+		"subject": "Scoperta rivoluzionaria",
+		"body": "Un nuovo esopianeta è stato scoperto nella fascia abitabile. Potrebbe avere acqua liquida. Leggi l’articolo completo per i dettagli.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-18",
+		"from": "newsletter@historytoday.com",
+		"subject": "Eventi storici",
+		"body": "Oggi ricordiamo l’anniversario della caduta dell’Impero Romano d’Occidente. Analizziamo le cause principali e le conseguenze per l’Europa.",
+		"folder": "inbox"
+	},
+	{
 		"date": "2025-09-17",
 		"from": "mizora@avernus.com",
 		"to": "myself@selfmy.com",
 		"subject": "Maledizioni infernali",
-		"body": "Ah, mortale. Vedo che hai osato aprire questa missiva. Una scelta... coraggiosa, anche se alquanto avventata. Le maledizioni infernali non sono semplici superstizioni da taverna, ma catene scolpite nel sangue e nel fuoco dei Nove Inferi.",
+		"body": "Ah, mortale. Vedo che hai osato aprire questa missiva. Una scelta... coraggiosa, anche se alquanto avventata. Le maledizioni infernali non sono semplici superstizioni da taverna, ma catene scolpite nel sangue e nel fuoco dei Nove Inferi. Esse rimangono legate per sempre a chi osa nominarle, e si nutrono delle tue paure più profonde. Ricorda, ogni scelta ha un prezzo, e il tuo debito è appena iniziato.",
 		"folder": "inbox"
 	},
 	{
@@ -12,43 +61,294 @@
 		"from": "shepard@example.com",
 		"to": "waffle@machine.com",
 		"subject": "Debriefing",
-		"body": "Missione terminata. Abbiamo avuto perdite minime, ma la prossima volta servirà più coordinazione. Non possiamo permetterci errori quando la posta in gioco è l'intera galassia.",
+		"body": "Missione terminata. Abbiamo avuto perdite minime, ma la prossima volta servirà più coordinazione. Non possiamo permetterci errori quando la posta in gioco è l'intera galassia. La squadra è stanca, ma il morale rimane alto.",
 		"folder": "inbox"
 	},
 	{
 		"date": "2025-09-11",
 		"from": "alice@example.com",
 		"subject": "Caffè?",
-		"body": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptatum placeat unde quis, pariatur temporibus laudantium beatae eaque voluptas, commodi iste, exercitationem esse dolor aut? Harum vel a repellendus soluta est hic, ut cumque perspiciatis molestias. Dicta enim mollitia ea praesentium deserunt laborum ratione, alias dolore, autem vel nulla quibusdam obcaecati et numquam eligendi? In quia atque quibusdam delectus voluptas eos, facilis similique porro illo quo iusto praesentium quaerat distinctio! Obcaecati distinctio similique quam vel doloribus at reiciendis, hic fuga consequuntur? Quaerat unde fugiat minus pariatur rem sequi quod itaque doloremque numquam, dicta modi eos at porro minima sunt provident?",
+		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed ullamcorper feugiat libero, sed placerat nibh blandit eget. Morbi pretium mi at erat vehicula sodales. Proin sit amet eros neque. Curabitur nec urna laoreet, bibendum orci nec, euismod orci. Aliquam erat volutpat. Suspendisse accumsan, purus nec convallis bibendum, felis magna ullamcorper eros, in finibus justo mi eu libero.",
 		"folder": "inbox"
 	},
 	{
 		"date": "2025-09-13",
 		"from": "carol@example.com",
 		"subject": "Meeting aggiornato",
-		"body": "Il meeting è spostato alle 11:00 in sala A.",
-		"folder": "inbox"
-	},
-	{
-		"date": "2025-09-12",
-		"from": "zimzimzamzum@example.com",
-		"subject": "Il titolo pià lungo della storia",
-		"body": "Zim zam me ne sono accorta oraaaaaaaaaaaaa, sistemare di nuovo mobile ingrombro di tutte le proprietà mail",
+		"body": "Il meeting è spostato alle 11:00 in sala A. Porta i report aggiornati.",
 		"folder": "inbox"
 	},
 	{
 		"date": "2025-09-13",
-		"from": "muffin@example.com",
-		"subject": "Pranzo veloce",
-		"body": "Ti va un panino veloce al bar sotto?",
+		"from": "zimzimzamzum@example.com",
+		"subject": "Titolo lunghissimo",
+		"body": "Zim zam me ne sono accorta oraaaaaaaaaaaaa, sistemare di nuovo mobile ingombro di tutte le proprietà mail. Ti mando questa mail lunghissima solo per testare lo scroll e la gestione di testi più estesi. Qui ci sono molte righe aggiuntive, perché spesso nei progetti reali il corpo di una mail può essere davvero lungo e pieno di dettagli, link o firme automatiche.",
 		"folder": "inbox"
 	},
 	{
-		"date": "2025-09-15",
-		"from": "pancake@example.com",
-		"to": "waffle@machine.com",
-		"subject": "Li mangio tutti",
-		"body": "Con burro di arachidi e marmellata, parimpampum",
+		"date": "2025-09-06",
+		"from": "joker@gotham.com",
+		"subject": "Scherzetto",
+		"body": "Why so serious? È solo un gioco. La vita è un palcoscenico e io sono qui solo per far ridere la platea. O piangere. Dipende dal punto di vista.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-24",
+		"from": "geralt@witcher.pl",
+		"subject": "Contratto",
+		"body": "Mostro avvistato nei dintorni di Novigrad. Probabilmente un leshen, anche se alcuni contadini giurano di aver visto una creatura simile a un lupo alto come due uomini. La ricompensa è alta, ma sospetto ci sia magia nel mezzo.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-20",
+		"from": "yoda@jedi.com",
+		"subject": "Consiglio Jedi",
+		"body": "Molto da imparare ancora tu hai. La Forza ti guida, ma pazienza devi avere. Ricorda: paura porta a rabbia, rabbia porta a odio, odio porta a sofferenza.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-18",
+		"from": "hr@company.com",
+		"subject": "Colloquio confermato",
+		"body": "Gentile candidato, la confermiamo per il colloquio fissato il 21 settembre alle ore 10:00. Si presenti presso la nostra sede centrale, ufficio 4B.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-16",
+		"from": "newsletter@techworld.com",
+		"subject": "Ultime novità",
+		"body": "Apple, Microsoft e Google hanno annunciato nuovi dispositivi in arrivo per l’autunno. I dettagli completi li trovi nella nostra newsletter settimanale.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-15",
+		"from": "dante@inferno.it",
+		"subject": "Cerchio sbagliato",
+		"body": "Siamo spiacenti di informarti che il tuo posto non è nel Limbo ma nel Girone dei golosi. Ti preghiamo di prepararti di conseguenza.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-14",
+		"from": "spiderman@dailybugle.com",
+		"subject": "Foto in allegato",
+		"body": "J. Jonah Jameson vuole altre foto. E le vuole ieri. Portamele subito, Parker!",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-13",
+		"from": "professor@hogwarts.uk",
+		"subject": "Pozioni",
+		"body": "La lezione di Pozioni è rimandata a martedì prossimo. Portate la felce acquatica e i denti di serpente, saranno indispensabili per l’esercizio.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-12",
+		"from": "tony.stark@starkindustries.com",
+		"subject": "Nuovo progetto",
+		"body": "Ho iniziato a lavorare a una nuova armatura. Questa volta include un sistema di auto-riparazione e una AI più brillante. Jarvis è già entusiasta. Tu preparati, avremo bisogno di test intensivi.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-11",
+		"from": "frodo@shire.me",
+		"subject": "Viaggio",
+		"body": "Sam, prepara lo zaino. Domani all’alba partiamo. Non dimenticare il pane di Lembas.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-10",
+		"from": "samwise@shire.me",
+		"subject": "Pane di Lembas",
+		"body": "Frodo, ho preparato il pane di Lembas come promesso. Non è molto, ma basterà a nutrirci per giorni.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-09",
+		"from": "gollum@caves.me",
+		"subject": "Mio Tesssoro",
+		"body": "Maledetto Baggins! Rubato il mio tesssoro. Lo rivoglio. Lo rivoglio subitoooo!",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-08",
+		"from": "newsletter@gattini.com",
+		"subject": "Lancio completato",
+		"body": "Il topino è stato lanciato con successo giù dalla mensola.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-07",
+		"from": "support@bank.com",
+		"subject": "Verifica sicurezza",
+		"body": "Abbiamo notato un accesso insolito al suo conto. Per favore verifichi immediatamente la sua attività.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-06",
+		"from": "link@hyrule.com",
+		"subject": "La leggenda continua",
+		"body": "Zelda ha bisogno del tuo aiuto. Porta la Master Sword al Tempio del Tempo. Non tardare.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-05",
+		"from": "newsletter@cookingworld.com",
+		"subject": "Ricetta del giorno",
+		"body": "Oggi ti proponiamo un curry speziato con latte di cocco. Facile, veloce e incredibilmente gustoso. Trovi tutti i dettagli nella ricetta completa sul nostro sito.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-04",
+		"from": "dr.strange@sanctum.com",
+		"subject": "Portale instabile",
+		"body": "Ho aperto un varco dimensionale per errore. Se vedi creature con tentacoli, non farti prendere dal panico. Sto cercando di richiuderlo.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-03",
+		"from": "support@socialapp.com",
+		"subject": "Reset password",
+		"body": "Abbiamo ricevuto una richiesta di reset password per il suo account. Se non è stato lei, ignori questa mail.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-03",
+		"from": "newsletter@fitnessclub.com",
+		"subject": "Allenamento settimanale",
+		"body": "Questa settimana concentriamoci su gambe e core. 3 sessioni, 45 minuti ciascuna. Non dimenticare di idratarti!",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-08-01",
+		"from": "aragorn@gondor.me",
+		"subject": "Consiglio di guerra",
+		"body": "Raduna i tuoi uomini. Marceremo all’alba verso Mordor. La speranza vive ancora.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-30",
+		"from": "newsletter@travelworld.com",
+		"subject": "10 mete da non perdere",
+		"body": "Scopri le 10 destinazioni più belle per l’estate 2025: dalle spiagge tropicali alle città storiche. Leggi la nostra guida completa per trovare la meta perfetta per te.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-30",
+		"from": "joker@gotham.com",
+		"subject": "Secondo scherzetto",
+		"body": "Ti sei divertito la prima volta? Questa volta raddoppio la posta in gioco. Gotham non dormirà stanotte.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-30",
+		"from": "support@shop.com",
+		"subject": "Ordine confermato",
+		"body": "Grazie per il tuo acquisto! Il tuo ordine #45321 è stato ricevuto e sarà spedito entro 3 giorni lavorativi.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-28",
+		"from": "newsletter@cryptonews.com",
+		"subject": "Mercato volatile",
+		"body": "Il mercato delle criptovalute è in forte fluttuazione. Bitcoin ha perso il 12% in una sola giornata, mentre nuove altcoin stanno guadagnando terreno.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-27",
+		"from": "witch@salem.com",
+		"subject": "Congrega riunita",
+		"body": "La luna piena è vicina. Preparati con candele nere e sale purificato. Non mancare al raduno.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-26",
+		"from": "support@streamflix.com",
+		"subject": "Nuove uscite",
+		"body": "Questa settimana su StreamFlix: 3 nuove serie fantasy, 2 thriller psicologici e un documentario esclusivo sullo spazio.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-25",
+		"from": "legolas@elfmail.com",
+		"subject": "Scorte di frecce",
+		"body": "Ho contato le frecce: 247 rimaste. Non basteranno per la battaglia. Dobbiamo fabbricarne altre.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-17",
+		"from": "batman@gotham.com",
+		"subject": "Missione notturna",
+		"body": "Stanotte pattuglierò la zona est della città. Se vedi attività sospette, avvisami subito. Gotham non può permettersi un’altra notte di caos.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-16",
+		"from": "newsletter@musicnow.com",
+		"subject": "Nuova playlist",
+		"body": "Abbiamo creato per te una playlist con i migliori successi del 2025. Ascoltala ora sulla nostra app!",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-15",
+		"from": "support@airline.com",
+		"subject": "Volo confermato",
+		"body": "Il suo volo AZ345 per Tokyo è confermato per il 5 settembre. Effettui il check-in online entro 48 ore dalla partenza.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-14",
+		"from": "newsletter@movieclub.com",
+		"subject": "Film della settimana",
+		"body": "Il film consigliato per questa settimana è 'Inception'. Riguardalo con noi e condividi le tue teorie sul forum!",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-13",
+		"from": "newsletter@artmag.com",
+		"subject": "Mostra imperdibile",
+		"body": "La Galleria d’Arte Moderna ospita una mostra dedicata a Van Gogh. Biglietti disponibili fino a fine mese.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-12",
+		"from": "support@gameplatform.com",
+		"subject": "Manutenzione programmata",
+		"body": "La piattaforma sarà in manutenzione dalle 2:00 alle 5:00 di notte. Durante questo periodo non sarà possibile accedere ai giochi online.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-11",
+		"from": "newsletter@foodie.com",
+		"subject": "Dolce della settimana",
+		"body": "Prova la nostra cheesecake al cioccolato bianco e lamponi. Facile da preparare e irresistibile!",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-10",
+		"from": "newsletter@techinsider.com",
+		"subject": "Intelligenza artificiale",
+		"body": "Un nuovo modello di AI ha superato i test di comprensione del linguaggio umano. Gli esperti discutono se sia un passo verso la vera AGI.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-09",
+		"from": "newsletter@sportlife.com",
+		"subject": "Finale campionato",
+		"body": "La finale di Champions League si giocherà sabato prossimo. Scopri le probabili formazioni e le statistiche pre-partita.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-08",
+		"from": "newsletter@dailynews.com",
+		"subject": "Ultim’ora",
+		"body": "Ultime notizie: forti tempeste hanno colpito la costa orientale. Leggi i dettagli e gli aggiornamenti meteo in tempo reale.",
+		"folder": "inbox"
+	},
+	{
+		"date": "2025-07-07",
+		"from": "gandalf@middleearth.com",
+		"subject": "Non puoi passare",
+		"body": "Questa non è una minaccia, è un avvertimento. Le ombre avanzano e solo il fuoco può fermarle. Preparati.",
 		"folder": "inbox"
 	}
 ]

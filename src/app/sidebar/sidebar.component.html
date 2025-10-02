@@ -9,22 +9,22 @@
 
 <ul class="folder-list flex-column w-100 mt-3">
 	<li class="folder">
-		<button class="btn btn-light w-100 text-start mb-1 mt-1">
+		<button class="btn btn-light w-100 text-start mb-1 mt-1" (click)="onInboxClick()">
 			<img class="icon me-1" src="assets/inbox.svg" alt="inbox"> Inbox
 		</button>
 	</li>
 	<li class="folder">
-		<button class="btn btn-light w-100 text-start mb-1">
+		<button class="btn btn-light w-100 text-start mb-1" (click)="onDraftsClick()">
 			<img class="icon me-1" src="assets/drafts.svg" alt="drafts"> Drafts
 		</button>
 	</li>
 	<li class="folder">
-		<button class="btn btn-light w-100 text-start mb-1">
+		<button class="btn btn-light w-100 text-start mb-1" (click)="onSentClick()">
 			<img class="icon me-1" src="assets/sent.svg" alt="sent"> Sent
 		</button>
 	</li>
 	<li class="folder">
-		<button class="btn btn-light w-100 text-start mb-1">
+		<button class="btn btn-light w-100 text-start mb-1" (click)="onTrashClick()">
 			<img class="icon me-1" src="assets/bin.svg" alt="bin"> Trash
 		</button>
 	</li>
