@@ -12,6 +12,9 @@ import { OutletContext } from '@angular/router';
 	styleUrl: './mail-list.component.scss'
 })
 export class MailListComponent {
+showActionsButtons() {
+throw new Error('Method not implemented.');
+}
 
 	selected?: Mail;
 

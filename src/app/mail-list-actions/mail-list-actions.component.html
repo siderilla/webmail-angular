@@ -1,6 +1,10 @@
 <div class="toolbar mb-3">
 	<app-compose-button class="compose-button"></app-compose-button>
-
+	<div class="actions-container" *ngIf="showActionButtons | async">
+		<button class="button" (click)="onDeleteClick()">
+			<img class="icon" src="assets/bin.svg" alt="delete">
+		</button>
+	</div>
 	<div class="num-container">
 		<span class="num-messages">15 of 135 messages</span>
 		<button class="button">
