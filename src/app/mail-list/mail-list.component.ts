@@ -3,7 +3,6 @@ import { MailListActionsComponent } from '../mail-list-actions/mail-list-actions
 import { MailCardComponent } from '../mail-card/mail-card.component';
 import { type Mail } from '../model/mail';
 import { CommonModule } from '@angular/common';
-import { OutletContext } from '@angular/router';
 
 @Component({
 	selector: 'app-mail-list',
