@@ -14,11 +14,17 @@ export class MailListActionsComponent {
 
 	mailService = inject(MailService)
 
-	@Input() isSelected = false; 
+	@Input() isSelected = false;
 
 	onDeleteClick() {
-		// changefolderrrrtotrassshhhh;
+		// this.mailService.moveToFolder(this.selectedMails, 'trash');
 	}
+
+	onArchiveClick() {
+
+	}
+
+
 
 
 

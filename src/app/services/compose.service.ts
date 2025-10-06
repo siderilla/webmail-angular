@@ -3,6 +3,7 @@ import { ModalService } from './modal.service';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { MailService } from './mail.service';
 
 @Injectable({
 	providedIn: 'root'
@@ -11,6 +12,7 @@ export class ComposeService {
 
 	private router = inject(Router);
 	private modal = inject(ModalService);
+	private mailService = inject(MailService)
 	private breakpointObserver = inject(BreakpointObserver);
 
 	isMobile: boolean = false;

@@ -58,9 +58,10 @@ export class MailService {
 			.sort((a, b) => b.date.getTime() - a.date.getTime()))
 	);
 
-
-
-	
+	moveToFolder(mailsToMove: Mail[], folder: Mail['folder']) {
+		const stored = localStorage.getItem(this.storageKey);
+		
+	}
 
 	// getInbox(): Mail[] {
 	// 	return this.mails.filter(m => m.folder === 'inbox');

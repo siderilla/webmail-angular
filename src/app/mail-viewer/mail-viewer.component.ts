@@ -15,8 +15,8 @@ export class MailViewerComponent {
 
 	private mailService = inject(MailService);
 
-	mails$ = this.mailService.filteredMails$;
-	// filteredMails$ = this.mailService.filteredMails$;
+	// mails$ = this.mailService.filteredMails$;
+	filteredMails$ = this.mailService.filteredMails$;
 
 	selectedMails: Mail[] = [];
 	selected?: Mail;
@@ -56,6 +56,7 @@ export class MailViewerComponent {
 	onMasterCheckboxChanged(mailsChecked: boolean) {
 		console.log(mailsChecked);
 	}
+
 
 	// deleteSelected() {
 	// 	this.selectedMails.forEach(m => this.mailService.deleteMail(m));
