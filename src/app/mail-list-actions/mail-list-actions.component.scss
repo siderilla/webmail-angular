@@ -2,8 +2,7 @@
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-template-rows: auto;
-	grid-template-areas:
-		"write . num-container";
+	grid-template-areas: "write . num-container";
 	align-items: center;
 }
 
@@ -21,9 +20,7 @@
 }
 
 @media (min-width: 769px) {
-
 	.compose-button {
 		display: none;
 	}
-
 }
