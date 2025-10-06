@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ComposeButtonComponent } from '../compose-button/compose-button.component';
 import { ComposeModalComponent } from "../compose-modal/compose-modal.component";
 import { CommonModule } from '@angular/common';
-import { ComposeFormComponent } from "../compose-page/compose-form.component";
+import { ComposeFormComponent } from "../compose-form/compose-form.component";
 import { ModalService } from '../services/modal.service';
 import { MailService } from '../services/mail.service';
 
