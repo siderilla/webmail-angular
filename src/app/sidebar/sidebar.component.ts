@@ -20,23 +20,18 @@ export class SidebarComponent {
 
 	onInboxClick() {
 		this.mailService.setCurrentFolder('inbox');
-		console.log('inbox folder')
 	}
 
 	onDraftsClick() {
 		this.mailService.setCurrentFolder('drafts');
-		console.log('drafts folder')
-
 	}
 
 	onSentClick() {
 		this.mailService.setCurrentFolder('sent');
-		console.log('sent folder')
 	}
 
 	onTrashClick() {
 		this.mailService.setCurrentFolder('trash');
-		console.log('trash folder')
 	}
 
 

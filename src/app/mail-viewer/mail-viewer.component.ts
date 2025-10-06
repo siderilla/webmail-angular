@@ -15,26 +15,29 @@ export class MailViewerComponent {
 
 	private mailService = inject(MailService);
 
-	mails$ = this.mailService.mails$;
+	mails$ = this.mailService.filteredMails$;
+	// filteredMails$ = this.mailService.filteredMails$;
 
 	selectedMails: Mail[] = [];
 	selected?: Mail;
 	openedMail?: Mail;
 
-	sortingMailsByDate(mails: Mail[]): Mail[] {
-		const ordered = mails.sort((a: Mail, b: Mail) => b.date.getTime() - a.date.getTime());
-		console.log("ordinato per data: ", ordered);
-		return ordered;
-	}
+	// sortingMailsByDate(mails: Mail[]): Mail[] {
+	// 	const ordered = mails.sort((a: Mail, b: Mail) => b.date.getTime() - a.date.getTime());
+	// 	console.log("ordinato per data: ", ordered);
+	// 	return ordered;
+	// }
 
 	// avvio l'app e voglio vedere in detail l'ultima mail arrivata (openedMail) e poi gestisco l'ultima cliccata
 	ngOnInit() {
-		this.mailService.mails$.subscribe(mails => {
-			if (mails.length > 0 && !this.openedMail) {
-				const ordered = this.sortingMailsByDate(mails);
-				this.openedMail = ordered[0];
-				console.log("mail più recente: ", this.openedMail);
-			}
+		this.mailService.filteredMails$.subscribe(mails => {
+			this.openedMail = mails[0];
+			console.log("mail aperta di default è l'ultima", this.openedMail)
+			// if (mails.length > 0 && !this.openedMail) {
+			// 	const ordered = this.sortingMailsByDate(mails);
+			// 	this.openedMail = ordered[0];
+			// 	console.log("mail più recente: ", this.openedMail);
+			// }
 		});
 	}
 

@@ -4,7 +4,7 @@
 		"from": "newsletter@healthplus.com",
 		"subject": "Consiglio della settimana",
 		"body": "Bevi almeno 2 litri di acqua al giorno. Sembra banale, ma è la base di una buona salute.",
-		"folder": "inbox"
+		"folder": "sent"
 	},
 	{
 		"date": "2025-07-22",
@@ -18,7 +18,7 @@
 		"from": "newsletter@bookclub.com",
 		"subject": "Libro del mese",
 		"body": "Questo mese leggiamo insieme 'Il nome della rosa'. Partecipa alle discussioni sul nostro forum dedicato.",
-		"folder": "inbox"
+		"folder": "sent"
 	},
 	{
 		"date": "2025-07-22",
@@ -62,14 +62,14 @@
 		"to": "waffle@machine.com",
 		"subject": "Debriefing",
 		"body": "Missione terminata. Abbiamo avuto perdite minime, ma la prossima volta servirà più coordinazione. Non possiamo permetterci errori quando la posta in gioco è l'intera galassia. La squadra è stanca, ma il morale rimane alto.",
-		"folder": "inbox"
+		"folder": "sent"
 	},
 	{
 		"date": "2025-09-11",
 		"from": "alice@example.com",
 		"subject": "Caffè?",
 		"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed ullamcorper feugiat libero, sed placerat nibh blandit eget. Morbi pretium mi at erat vehicula sodales. Proin sit amet eros neque. Curabitur nec urna laoreet, bibendum orci nec, euismod orci. Aliquam erat volutpat. Suspendisse accumsan, purus nec convallis bibendum, felis magna ullamcorper eros, in finibus justo mi eu libero.",
-		"folder": "inbox"
+		"folder": "sent"
 	},
 	{
 		"date": "2025-09-13",

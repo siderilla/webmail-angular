@@ -46,13 +46,16 @@ export class MailService {
 
 	setCurrentFolder(folder: Mail['folder']) {
 		this.currentFolderSubject.next(folder)
+		console.log("mail cambiata", folder)
 	}
 
 	filteredMails$ = combineLatest([
 		this.mails$,
 		this.currentFolder$
 	]).pipe(
-		map(([mails, folder]) => mails.filter(m => m.folder === folder))
+		map(([mails, folder]) => mails
+			.filter(m => m.folder === folder)
+			.sort((a, b) => b.date.getTime() - a.date.getTime()))
 	);
 
 

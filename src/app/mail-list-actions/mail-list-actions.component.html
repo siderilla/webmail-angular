@@ -2,19 +2,72 @@
 	<app-compose-button class="compose-button">
 	</app-compose-button>
 
-	<div class="actions-container" *ngIf="isSelected"> 
+	<div class="actions-container" *ngIf="isSelected">
 		<button class="button me-3" (click)="onDeleteClick()">
-			<img class="icon" src="assets/bin.svg" alt="delete">
+
+			<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+				<g id="SVGRepo_iconCarrier">
+					<path
+						d="M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M18 6V16.2C18 17.8802 18 18.7202 17.673 19.362C17.3854 19.9265 16.9265 20.3854 16.362 20.673C15.7202 21 14.8802 21 13.2 21H10.8C9.11984 21 8.27976 21 7.63803 20.673C7.07354 20.3854 6.6146 19.9265 6.32698 19.362C6 18.7202 6 17.8802 6 16.2V6M14 10V17M10 10V17"
+						stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					</path>
+				</g>
+			</svg>
+
 		</button>
 		<button class="button me-3">
-			<img class="icon" src="assets/read.svg" alt="mark-as-read">
+			<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+				<g id="SVGRepo_iconCarrier">
+					<path
+						d="M4 19L9 14M20 19L15 14M3.02832 10L10.2246 14.8166C10.8661 15.2443 11.1869 15.4581 11.5336 15.5412C11.8399 15.6146 12.1593 15.6146 12.4657 15.5412C12.8124 15.4581 13.1332 15.2443 13.7747 14.8166L20.971 10M10.2981 4.06879L4.49814 7.71127C3.95121 8.05474 3.67775 8.22648 3.4794 8.45864C3.30385 8.66412 3.17176 8.90305 3.09111 9.161C3 9.45244 3 9.77535 3 10.4212V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.0799 20 6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V10.4212C21 9.77535 21 9.45244 20.9089 9.161C20.8282 8.90305 20.6962 8.66412 20.5206 8.45864C20.3223 8.22648 20.0488 8.05474 19.5019 7.71127L13.7019 4.06879C13.0846 3.68116 12.776 3.48735 12.4449 3.4118C12.152 3.34499 11.848 3.34499 11.5551 3.4118C11.224 3.48735 10.9154 3.68116 10.2981 4.06879Z"
+						stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+				</g>
+			</svg>
 		</button>
 		<button class="button me-3">
-			<img class="icon" src="assets/archive.svg" alt="archive">
+			<svg class="icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+				<g id="SVGRepo_iconCarrier">
+					<title>archive</title>
+					<g id="Layer_2" data-name="Layer 2">
+						<g id="invisible_box" data-name="invisible box">
+							<rect width="48" height="48" fill="none"></rect>
+						</g>
+						<g id="icons_Q2" data-name="icons Q2">
+							<path
+								d="M43.2,12.3l-5-6.7A4,4,0,0,0,35,4H13A4,4,0,0,0,9.8,5.6l-5,6.7A4.1,4.1,0,0,0,4,14.7V40a4,4,0,0,0,4,4H40a4,4,0,0,0,4-4V14.7A4.1,4.1,0,0,0,43.2,12.3ZM13,8H35l4.5,6H8.5ZM40,40H8V18H22V29.2l-2.6-2.6a1.9,1.9,0,0,0-3,.2,2.1,2.1,0,0,0,.2,2.7l6,5.9a1.9,1.9,0,0,0,2.8,0l6-5.9a2.1,2.1,0,0,0,.2-2.7,1.9,1.9,0,0,0-3-.2L26,29.2V18H40Z">
+							</path>
+						</g>
+					</g>
+				</g>
+			</svg>
 		</button>
 		<button class="button">
-			<img class="icon" src="assets/moveto.svg" alt="moveto">
-		</button>
+			<svg class="icon" fill="#000000" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+				<g id="SVGRepo_iconCarrier">
+					<defs>
+						<style>
+							.cls-1 {
+								fill: none;
+							}
+						</style>
+					</defs>
+					<polygon points="18 13 16.59 14.41 19.17 17 10 17 10 19 19.17 19 16.59 21.59 18 23 23 18 18 13">
+					</polygon>
+					<path
+						d="M11.1716,6l3.4142,3.4142L15.1716,10H28V26H4V6h7.1716m0-2H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2H16L12.5858,4.5858A2,2,0,0,0,11.1716,4Z">
+					</path>
+					<rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1"
+						width="32" height="32"></rect>
+				</g>
+			</svg> </button>
 	</div>
 
 	<div class="num-container">
@@ -22,7 +75,7 @@
 		<button class="button">
 			<img class="icon" src="assets/arrow-left.svg" alt="arrow-left">
 		</button>
-		<button class="button"> 
+		<button class="button">
 			<img class="icon" src="assets/arrow-right.svg" alt="arrow-right">
 		</button>
 	</div>
