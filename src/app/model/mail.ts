@@ -1,5 +1,7 @@
 export interface Mail {
 
+	id: string;
+
 	date: Date;
 	from: string;
 	to?: string;

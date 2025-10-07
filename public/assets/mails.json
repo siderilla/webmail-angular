@@ -1,5 +1,6 @@
 [
 	{
+		"id": "a3b7d5f2-81c1-4e29-b5a4-9271b8c2ea91",
 		"date": "2025-07-24",
 		"from": "newsletter@healthplus.com",
 		"subject": "Consiglio della settimana",
@@ -7,6 +8,7 @@
 		"folder": "sent"
 	},
 	{
+		"id": "e8c9c572-4a1a-42b8-8452-65db3eb4f90d",
 		"date": "2025-07-22",
 		"from": "support@university.com",
 		"subject": "Iscrizione confermata",
@@ -14,6 +16,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "b69aeac3-2d4f-4e52-a18c-4dbab4e27a9f",
 		"date": "2025-07-22",
 		"from": "newsletter@bookclub.com",
 		"subject": "Libro del mese",
@@ -21,6 +24,7 @@
 		"folder": "sent"
 	},
 	{
+		"id": "c38de84a-97c1-41c0-9ef2-fb25e36d42ad",
 		"date": "2025-07-22",
 		"from": "newsletter@fashionmag.com",
 		"subject": "Moda autunno",
@@ -28,6 +32,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "f62ad5be-0c5e-47cb-b3cb-8a3e5406e7b9",
 		"date": "2025-07-19",
 		"from": "newsletter@gaminghub.com",
 		"subject": "Nuovo DLC",
@@ -35,6 +40,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "5f09b57c-1f22-46c5-bab1-4e7d09d8f46a",
 		"date": "2025-07-19",
 		"from": "newsletter@scienceworld.com",
 		"subject": "Scoperta rivoluzionaria",
@@ -42,6 +48,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "cb9c9b67-6b15-4d76-a442-ff31d34ac97e",
 		"date": "2025-07-18",
 		"from": "newsletter@historytoday.com",
 		"subject": "Eventi storici",
@@ -49,6 +56,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "847d61e1-83b8-46c9-969b-cfa1c2a96465",
 		"date": "2025-09-17",
 		"from": "mizora@avernus.com",
 		"to": "myself@selfmy.com",
@@ -57,6 +65,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "c94afbe3-1c78-4f54-9d3d-bac29a04c210",
 		"date": "2025-09-15",
 		"from": "shepard@example.com",
 		"to": "waffle@machine.com",
@@ -65,6 +74,7 @@
 		"folder": "sent"
 	},
 	{
+		"id": "1ef3ad94-2259-44b8-b0b0-2372f66f5cda",
 		"date": "2025-09-11",
 		"from": "alice@example.com",
 		"subject": "Caffè?",
@@ -72,6 +82,7 @@
 		"folder": "sent"
 	},
 	{
+		"id": "8e1c1a23-6b12-47d2-bb26-5123dc4514f9",
 		"date": "2025-09-13",
 		"from": "carol@example.com",
 		"subject": "Meeting aggiornato",
@@ -79,6 +90,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "7a4cde56-2af4-4f63-ae91-9cbe1020b115",
 		"date": "2025-09-13",
 		"from": "zimzimzamzum@example.com",
 		"subject": "Titolo lunghissimo",
@@ -86,6 +98,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "c3d79f85-1f29-4d94-9a71-889c2a27f13b",
 		"date": "2025-09-06",
 		"from": "joker@gotham.com",
 		"subject": "Scherzetto",
@@ -93,6 +106,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "c49af1e2-5f93-4b31-9a1c-4a06cf59148b",
 		"date": "2025-08-24",
 		"from": "geralt@witcher.pl",
 		"subject": "Contratto",
@@ -100,6 +114,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "2f49d7b4-5e81-4cb4-b20c-90df0b8b43b7",
 		"date": "2025-08-20",
 		"from": "yoda@jedi.com",
 		"subject": "Consiglio Jedi",
@@ -107,6 +122,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "d7f19b62-9ec2-4e5f-8ff2-f7e812a9eb1d",
 		"date": "2025-08-18",
 		"from": "hr@company.com",
 		"subject": "Colloquio confermato",
@@ -114,6 +130,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "bde2a3a1-3fa7-4f8c-95a3-3ce82121a7ce",
 		"date": "2025-08-16",
 		"from": "newsletter@techworld.com",
 		"subject": "Ultime novità",
@@ -121,6 +138,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "41c8d8c3-83a9-4c89-82ab-b71214234a42",
 		"date": "2025-08-15",
 		"from": "dante@inferno.it",
 		"subject": "Cerchio sbagliato",
@@ -128,6 +146,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "bcb60d87-414f-4ff3-bd5d-41888b9bb4c3",
 		"date": "2025-08-14",
 		"from": "spiderman@dailybugle.com",
 		"subject": "Foto in allegato",
@@ -135,6 +154,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "65461e17-1a67-4a15-8e37-b73a539a8ff0",
 		"date": "2025-08-13",
 		"from": "professor@hogwarts.uk",
 		"subject": "Pozioni",
@@ -142,6 +162,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "6c61699f-5424-4f15-9817-b0090e6cb409",
 		"date": "2025-08-12",
 		"from": "tony.stark@starkindustries.com",
 		"subject": "Nuovo progetto",
@@ -149,6 +170,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "e3e5da02-f3f9-40d0-a92d-930c12f98f9e",
 		"date": "2025-08-11",
 		"from": "frodo@shire.me",
 		"subject": "Viaggio",
@@ -156,6 +178,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "e2a932d4-6a53-4e62-b9b9-3a8b10c91c2a",
 		"date": "2025-08-10",
 		"from": "samwise@shire.me",
 		"subject": "Pane di Lembas",
@@ -163,6 +186,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "d5a3a9df-8f47-49b7-b1c9-d868cb142a6b",
 		"date": "2025-08-09",
 		"from": "gollum@caves.me",
 		"subject": "Mio Tesssoro",
@@ -170,6 +194,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "9084e0b1-8d61-48c2-bf4e-9054026fd216",
 		"date": "2025-08-08",
 		"from": "newsletter@gattini.com",
 		"subject": "Lancio completato",
@@ -177,6 +202,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "5ce5b6de-ccf7-43e8-802a-1d6d2c3b74b5",
 		"date": "2025-08-07",
 		"from": "support@bank.com",
 		"subject": "Verifica sicurezza",
@@ -184,6 +210,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "4a8db18a-cab6-4092-b32f-d8bdf7b6a82d",
 		"date": "2025-08-06",
 		"from": "link@hyrule.com",
 		"subject": "La leggenda continua",
@@ -191,6 +218,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "b8c1a8e9-715e-4d6e-b726-72a4f1f10fd1",
 		"date": "2025-08-05",
 		"from": "newsletter@cookingworld.com",
 		"subject": "Ricetta del giorno",
@@ -198,6 +226,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "5f25c3e4-f48f-49b2-9e2a-4db1af915b87",
 		"date": "2025-08-04",
 		"from": "dr.strange@sanctum.com",
 		"subject": "Portale instabile",
@@ -205,6 +234,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "2b86db34-d0a3-46b2-89ac-615d4113ad8f",
 		"date": "2025-08-03",
 		"from": "support@socialapp.com",
 		"subject": "Reset password",
@@ -212,6 +242,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "e65c77ac-9e2f-4fcb-8b1a-09d69e88a1a3",
 		"date": "2025-08-03",
 		"from": "newsletter@fitnessclub.com",
 		"subject": "Allenamento settimanale",
@@ -219,6 +250,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "6bb15a89-34c8-4415-bd14-3b8c219f96b4",
 		"date": "2025-08-01",
 		"from": "aragorn@gondor.me",
 		"subject": "Consiglio di guerra",
@@ -226,6 +258,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "3b4e77ea-d1c6-41a1-9b7c-11a07ce08f21",
 		"date": "2025-07-30",
 		"from": "newsletter@travelworld.com",
 		"subject": "10 mete da non perdere",
@@ -233,6 +266,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "3cc2d8c4-37cb-4b0b-88fa-c82de04af9b2",
 		"date": "2025-07-30",
 		"from": "joker@gotham.com",
 		"subject": "Secondo scherzetto",
@@ -240,6 +274,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "e7d961b1-6c63-4294-9026-3f40d142ad5d",
 		"date": "2025-07-30",
 		"from": "support@shop.com",
 		"subject": "Ordine confermato",
@@ -247,6 +282,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "fbd6b984-996d-4f41-9b3d-29e63b931ea5",
 		"date": "2025-07-28",
 		"from": "newsletter@cryptonews.com",
 		"subject": "Mercato volatile",
@@ -254,6 +290,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "4de35cf1-4f4b-4a1c-9750-63af21d604ed",
 		"date": "2025-07-27",
 		"from": "witch@salem.com",
 		"subject": "Congrega riunita",
@@ -261,6 +298,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "9d91c257-d6f2-4bb6-b3a4-62ef3c468b8a",
 		"date": "2025-07-26",
 		"from": "support@streamflix.com",
 		"subject": "Nuove uscite",
@@ -268,6 +306,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "fa6e19bc-b97d-4797-8cdb-965ba9a43832",
 		"date": "2025-07-25",
 		"from": "legolas@elfmail.com",
 		"subject": "Scorte di frecce",
@@ -275,6 +314,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "b0ed1b0b-5b0c-44a4-bd0a-14a2c502ca94",
 		"date": "2025-07-17",
 		"from": "batman@gotham.com",
 		"subject": "Missione notturna",
@@ -282,6 +322,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "61d83352-90c9-4db5-b3b0-3c3b54074502",
 		"date": "2025-07-16",
 		"from": "newsletter@musicnow.com",
 		"subject": "Nuova playlist",
@@ -289,6 +330,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "1a47b32c-7a4f-4978-bb17-0b6c6073a274",
 		"date": "2025-07-15",
 		"from": "support@airline.com",
 		"subject": "Volo confermato",
@@ -296,6 +338,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "d94e5aa2-ecde-41ad-8b4c-35f18a41f1cb",
 		"date": "2025-07-14",
 		"from": "newsletter@movieclub.com",
 		"subject": "Film della settimana",
@@ -303,6 +346,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "0e3d44f5-b77a-4386-b60b-c295ad5f18ff",
 		"date": "2025-07-13",
 		"from": "newsletter@artmag.com",
 		"subject": "Mostra imperdibile",
@@ -310,6 +354,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "67b358b0-3dc6-41d3-bde7-1e0efdf50426",
 		"date": "2025-07-12",
 		"from": "support@gameplatform.com",
 		"subject": "Manutenzione programmata",
@@ -317,6 +362,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "a8e168d7-86c7-476a-a788-97c1d0cc8650",
 		"date": "2025-07-11",
 		"from": "newsletter@foodie.com",
 		"subject": "Dolce della settimana",
@@ -324,6 +370,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "89a2a97d-1969-48f1-bd9f-86e29072dc64",
 		"date": "2025-07-10",
 		"from": "newsletter@techinsider.com",
 		"subject": "Intelligenza artificiale",
@@ -331,6 +378,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "b07e4a8d-0b88-4928-947d-40348f32ee2d",
 		"date": "2025-07-09",
 		"from": "newsletter@sportlife.com",
 		"subject": "Finale campionato",
@@ -338,6 +386,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "80b0dc3a-bb23-4cf1-bcb0-16a5a4c3e442",
 		"date": "2025-07-08",
 		"from": "newsletter@dailynews.com",
 		"subject": "Ultim’ora",
@@ -345,6 +394,7 @@
 		"folder": "inbox"
 	},
 	{
+		"id": "1f3de3d7-ecf1-4033-b1e8-6dcff460b894",
 		"date": "2025-07-07",
 		"from": "gandalf@middleearth.com",
 		"subject": "Non puoi passare",

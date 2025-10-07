@@ -57,9 +57,11 @@ export class MailViewerComponent {
 		console.log(mailsChecked);
 	}
 
+	
 
 	// deleteSelected() {
 	// 	this.selectedMails.forEach(m => this.mailService.deleteMail(m));
 	// 	this.selectedMails = [];
 	// }
+
 }

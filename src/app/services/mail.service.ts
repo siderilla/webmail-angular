@@ -14,10 +14,19 @@ export class MailService {
 	private storageKey = 'mails';
 
 	private mailsSubject = new BehaviorSubject<Mail[]>([]);
-	public mails$ = this.mailsSubject.asObservable();
+	private mails$ = this.mailsSubject.asObservable();
 
 	private currentFolderSubject = new BehaviorSubject<Mail['folder']>('inbox');
 	public currentFolder$ = this.currentFolderSubject.asObservable();
+
+	filteredMails$ = combineLatest([
+		this.mails$,
+		this.currentFolder$
+	]).pipe(
+		map(([mails, folder]) => mails
+			.filter(m => m.folder === folder)
+			.sort((a, b) => b.date.getTime() - a.date.getTime()))
+	);
 
 	constructor() {
 		this.initMails();
@@ -49,53 +58,17 @@ export class MailService {
 		console.log("mail cambiata", folder)
 	}
 
-	filteredMails$ = combineLatest([
-		this.mails$,
-		this.currentFolder$
-	]).pipe(
-		map(([mails, folder]) => mails
-			.filter(m => m.folder === folder)
-			.sort((a, b) => b.date.getTime() - a.date.getTime()))
-	);
-
 	moveToFolder(mailsToMove: Mail[], folder: Mail['folder']) {
 		const stored = localStorage.getItem(this.storageKey);
-		
+		if (!stored) return;
+		const allMails = JSON.parse(stored);
+
+		const movingMails = allMails.map((m: Mail) => {
+			mailsToMove.some(selected => selected.id === m.id);
+		});
+
+		localStorage.setItem(this.storageKey, JSON.stringify(movingMails));
 	}
 
-	// getInbox(): Mail[] {
-	// 	return this.mails.filter(m => m.folder === 'inbox');
-	// }
-
-
-	// getAllMails(): Mail[] {
-	// 	const stored = localStorage.getItem(this.storageKey);
-	// 	if (stored) {
-	// 		return JSON.parse(stored).map((m: any) => ({
-	// 			...m,
-	// 			date: new Date(m.date)
-	// 		}));
-	// 	}
-
-	// 	this.http.get<Mail[]>(this.apiUrl).subscribe(data => {
-	// 		localStorage.setItem(this.storageKey, JSON.stringify(data));
-	// 	});
-
-	// 	return [];
-	// }
-
-	// saveMails(mails: Mail[]): void {
-	// 	localStorage.setItem(this.storageKey, JSON.stringify(mails));
-	// }
-
-	// deleteMail(mail: Mail): void {
-	// 	const mails = this.getAllMails().filter(m => m !== mail);
-	// 	this.saveMails(mails);
-	// }
-
-	// getMailsByFolder(folder: Mail['folder']): Mail[] {
-	// 	return this.getAllMails()
-	// 		.filter(m => m.folder === folder);
-	// }
 
 }

@@ -15,9 +15,10 @@ export class MailListActionsComponent {
 	mailService = inject(MailService)
 
 	@Input() isSelected = false;
+	@Input() selectedMails: Mail[] = [];
 
 	onDeleteClick() {
-		// this.mailService.moveToFolder(this.selectedMails, 'trash');
+		this.mailService.moveToFolder(this.selectedMails, 'trash');
 	}
 
 	onArchiveClick() {
