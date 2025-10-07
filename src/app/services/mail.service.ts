@@ -64,10 +64,13 @@ export class MailService {
 		const allMails = JSON.parse(stored);
 
 		const movingMails = allMails.map((m: Mail) => {
-			mailsToMove.some(selected => selected.id === m.id);
+			mailsToMove.some(selected => selected.id === m.id)
+			? { ...m, folder } 
+			: console.log("dioporco");
 		});
 
 		localStorage.setItem(this.storageKey, JSON.stringify(movingMails));
+		this.updateSubject(movingMails);
 	}
 
 
