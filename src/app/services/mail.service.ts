@@ -61,12 +61,12 @@ export class MailService {
 	moveToFolder(mailsToMove: Mail[], folder: Mail['folder']) {
 		const stored = localStorage.getItem(this.storageKey);
 		if (!stored) return;
-		const allMails = JSON.parse(stored);
 
-		const movingMails = allMails.map((m: Mail) => {
-			mailsToMove.some(selected => selected.id === m.id)
-			? { ...m, folder } 
-			: console.log("dioporco");
+		const allMails = JSON.parse(stored);
+		const movingMails = allMails.map((m: Mail) => { // cioè le mail erano tutte null prima perché mancava il return .-. tutte le arrow function vogliono il return!
+			return mailsToMove.some(selected => selected.id === m.id)
+			? { ...m, folder }
+			: m;
 		});
 
 		localStorage.setItem(this.storageKey, JSON.stringify(movingMails));
